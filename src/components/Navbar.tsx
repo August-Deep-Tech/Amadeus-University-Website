@@ -105,7 +105,7 @@ const Navbar = () => {
                                         onMouseLeave={() => {
                                             isInnerNav && setInnerNav(true) 
                                         }}
-                                        className={`${isHome ? "text-au-white" : "text-au-true-black"} py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150  hover:border-b-4 hover:border-au-burgundy ${item.name === currentPath && "border-b-4"}  ${pathname.startsWith(item.link) ? "border-b-4" : ""} border-au-burgundy`}>{item.name}
+                                        className={`${isHome ? "text-au-white" : "text-au-true-black"} py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 group-hover:border-b-4 hover:border-au-burgundy ${item.name === currentPath && "border-b-4"}  ${pathname.startsWith(item.link) ? "border-b-4" : ""} border-au-burgundy`}>{item.name}
                                     </Link>
                                     {item.submenu.length > 0 && (
                                         <div>
