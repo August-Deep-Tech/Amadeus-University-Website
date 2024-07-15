@@ -18,9 +18,6 @@ const Navbar = () => {
     const [isInnerNav, setIsInnerNav] = useState(false)
     const [isOuterNav, setIsOuterNav] = useState(false)
     const [innerNav, setInnerNav] = useState(false)
-    const [hoversub, setHoverSub] = useState(false)
-    const [subClicked, setSubClicked] = useState("")
-    const [isSubmenuVisible, setIsSubmenuVisible] = useState(false);
 
     const getmenuByName = (data: any, menuName: any) => {
         const menuItem = data.find((item: any) => item.name === menuName);
@@ -81,7 +78,7 @@ const Navbar = () => {
 
     return (
         <>
-            <MobileNav open={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
+            <MobileNav open={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} currentPath={currentPath} setCurrentPath={setCurrentPath} prevPath={prevPath} setPrevPath={setPrevPath} />
             <nav className={`${isHome ? "absolute" : "relative"} w-full border-b border-au-white lg:mb-[60px]`}>
                 <div className="2xl:w-[1440px] 2xl:mx-auto py-2.5 lg:px-2.5 2xl:px-0">
                     <div className='flex justify-between items-center lg:hidden px-4'>
@@ -174,7 +171,7 @@ const Navbar = () => {
                                                                         //     setIsInnerNav(false)
                                                                         //     setCurrentPath(subItem.name)
                                                                         // }
-                                                                    }} className="block py-4">{subItem.name}
+                                                                    }} className={`block py-4 ${currentPath === subItem.name ? "font-bold text-bold" : ""}`}>{subItem.name}
                                                                     </Link>
                                                                 </li>
                                                             ))}
@@ -187,7 +184,7 @@ const Navbar = () => {
                                                                     // setCurrentPath(subItem.name)
                                                                     // setPrevPath(subItem.name)
                                                                     localStorage.setItem("currentpath", subItem.name)
-                                                                }} className="block py-4">{subItem.name}
+                                                                }}  className={`${currentPath === subItem.name ? "font-bold text-bold" : ""}`}>{subItem.name}
                                                                 </Link>
                                                             </li>
                                                         ))}

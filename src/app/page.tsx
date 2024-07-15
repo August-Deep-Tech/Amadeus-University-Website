@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="">
-      <div className="hero flex items-end text-au-white">
+      <div className="hero flex justify-center items-end text-au-white">
         <div>
           <h1 className="text-[20px] leading-[36px] sm:leading-[48px] sm:text-[30px] w-[90%] sm:w-[65%] text-center mx-auto">Defy gravity: Patrick Awuah's address at University of Toronto's convocation on award of Honourary Doctorate</h1>
           <div className="flex justify-center pt-[25px] pb-[50px]">
