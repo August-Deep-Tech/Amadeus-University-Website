@@ -58,7 +58,7 @@ const Navbar = () => {
         <>
             <MobileNav open={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
             <nav className={`${isHome ? "absolute" : "relative"} w-full border-b border-au-white mb-[60px]`}>
-                <div className="container mx-auto py-2.5">
+                <div className="2xl:container 2xl:mx-auto py-2.5">
                     <div className='flex justify-between items-center xl:hidden px-4'>
                         <Link href="/">
                             <div className="relative h-12 w-12">
@@ -74,7 +74,7 @@ const Navbar = () => {
                             className={`w-10 h-10 ${isHome ? "text-au-white" : "text-au-100-black"}`} />
 
                     </div>
-                    <div className="hidden xl:flex gap-[300px] items-center">
+                    <div className="hidden xl:flex justify-between items-center">
                         <Link href="/" className="relative h-6 w-6 sm:h-20 sm:w-20">
                             <Image
                                 src="/assets/au-web-logo-d.png"
@@ -109,9 +109,9 @@ const Navbar = () => {
                                                 }
                                             >
                                                 {/* <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block`}> */}
-                                                <div className="container mx-auto flex gap-[300px] items-center py-4">
+                                                <div className="2xl:container 2xl:mx-auto flex items-center justify-between">
                                                     <p className='text-[20px] font-bold'>{item.name}</p>
-                                                    {!innerNav && <ul className='flex items-center gap-5 absolute translate-x-[385px]'>
+                                                    {!innerNav && <ul className='flex items-center gap-5'>
                                                         {item.submenu.map((subItem, subIndex) => (
                                                             <li key={subIndex}>
                                                                 <Link href={subItem.link} onClick={() => {
@@ -135,7 +135,7 @@ const Navbar = () => {
                                             </div>
                                             {(pathname === "/job-openings"  ? isHome : !isHome) && <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hover:transition-all hover:ease-in-out delay-150 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
                                                 {/* <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block`}> */}
-                                                <div className="container mx-auto flex gap-[300px] items-center">
+                                                <div className="container mx-auto flex gap-[300px] items-center py-4">
                                                     <p className='text-[20px] font-bold'>
                                                         {innerNav ? currentPath : item.name}
                                                     </p>
