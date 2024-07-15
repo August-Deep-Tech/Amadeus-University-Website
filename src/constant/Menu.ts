@@ -18,7 +18,6 @@ export const menuData = [
             },
             { name: 'Our Campus', link: '/about/our-campus' },
             { name: 'Alumni', link: '/about/alumni' },
-            { name: 'Amadeus Next Decade', link: '/about/amadeus-next-decade' },
             { name: 'Contact Us', link: '/about/contact-us' },
         ]
     },
@@ -40,7 +39,6 @@ export const menuData = [
                 ]
             },
             { name: 'Our Campus', link: '#' },
-            { name: 'Job Openings', link: '#' },
             { name: 'Contact Us', link: '#' },
         ]
     },
@@ -80,5 +78,5 @@ export const menuData = [
             { name: 'Custom Development', link: '#' }
         ]
     },
-    { name: 'Job Openings', link: '/job-openings', submenu: [] }
+    // { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];

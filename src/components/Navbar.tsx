@@ -147,7 +147,7 @@ const Navbar = () => {
                                                     </ul>}
                                                 </div>
                                             </div>
-                                            {(pathname === "/job-openings" ? isHome : !isHome) && <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hover:transition-all hover:ease-in-out delay-150 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
+                                            {(pathname === "/job-openings" ? isHome : !isHome) && <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hover:transition-all hover:ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-0 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
                                                 <div className="2xl:w-[1440px] 2xl:mx-auto px-5 2xl:px-0 flex justify-between items-center ">
                                                     <div className=''>
                                                         <p className='text-[20px] font-bold'>
