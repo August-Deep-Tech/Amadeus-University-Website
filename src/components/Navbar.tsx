@@ -54,6 +54,10 @@ const Navbar = () => {
         }
       } ,[isMobileMenuOpen])
 
+      useEffect(() => {
+        console.log(isOuterNav)
+      }, [isOuterNav])
+
     return (
         <>
             <MobileNav open={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
@@ -101,7 +105,7 @@ const Navbar = () => {
                                     {item.submenu && (
                                         <div>
                                             <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block group-hover:z-[10]`}
-                                                onMouseEnter={() => (isOuterNav && isInnerNav) && setInnerNav(false)}
+                                                onMouseEnter={() => isOuterNav && setInnerNav(false)}
                                                 onMouseLeave={() => { 
                                                     setIsOuterNav(false)
                                                     isInnerNav && setInnerNav(true) }
