@@ -17,7 +17,6 @@ export const menuData = [
                 ]
             },
             { name: 'Our Campus', link: '/about/our-campus' },
-            { name: 'Job Openings', link: '/about/job-openings' },
             { name: 'Alumni', link: '/about/alumni' },
             { name: 'Amadeus Next Decade', link: '/about/amadeus-next-decade' },
             { name: 'Contact Us', link: '/about/contact-us' },
@@ -56,7 +55,7 @@ export const menuData = [
     },
     {
         name: 'Student Life',
-        link: '#',
+        link: '/student-life',
         submenu: [
             { name: 'Consulting', link: '#' },
             { name: 'Support', link: '#' },
@@ -65,7 +64,7 @@ export const menuData = [
     },
     {
         name: 'News',
-        link: '#',
+        link: '/news',
         submenu: [
             { name: 'Consulting', link: '#' },
             { name: 'Support', link: '#' },
@@ -74,12 +73,12 @@ export const menuData = [
     },
     {
         name: 'Useful Links',
-        link: '#',
+        link: '/useful-links',
         submenu: [
             { name: 'Consulting', link: '#' },
             { name: 'Support', link: '#' },
             { name: 'Custom Development', link: '#' }
         ]
     },
-    { name: 'Job Openings', link: '#' }
+    { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];

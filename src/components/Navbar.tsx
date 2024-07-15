@@ -48,15 +48,11 @@ const Navbar = () => {
 
     useEffect(() => {
         if (isMobileMenuOpen) {
-          document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         } else {
-          document.body.style.overflow = "visible";
+            document.body.style.overflow = "visible";
         }
-      } ,[isMobileMenuOpen])
-
-      useEffect(() => {
-        console.log(isOuterNav)
-      }, [isOuterNav])
+    }, [isMobileMenuOpen])
 
     return (
         <>
@@ -102,19 +98,20 @@ const Navbar = () => {
                                         onMouseLeave={() => isInnerNav && setInnerNav(true)}
                                         className={`${isHome ? "text-au-white" : "text-au-true-black"} py-[40px] -translate-y-1 px-4 hover:transition-all hover:ease-in-out delay-150  hover:border-b-4 hover:border-au-burgundy ${pathname.startsWith(item.link) ? "border-b-4" : ""} border-au-burgundy`}>{item.name}
                                     </Link>
-                                    {item.submenu && (
+                                    {item.submenu.length > 0 && (
                                         <div>
-                                            <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block group-hover:z-[10]`}
+                                            <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block group-hover:z-[10] hover:transition-all hover:ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-0`}
                                                 onMouseEnter={() => isOuterNav && setInnerNav(false)}
-                                                onMouseLeave={() => { 
+                                                onMouseLeave={() => {
                                                     setIsOuterNav(false)
-                                                    isInnerNav && setInnerNav(true) }
+                                                    isInnerNav && setInnerNav(true)
+                                                }
                                                 }
                                             >
                                                 {/* <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block`}> */}
-                                                <div className="container mx-auto flex gap-[300px] items-center">
+                                                <div className="container mx-auto flex gap-[300px] items-center py-4">
                                                     <p className='text-[20px] font-bold'>{item.name}</p>
-                                                    {!innerNav && <ul className='flex items-center gap-5'>
+                                                    {!innerNav && <ul className='flex items-center gap-5 absolute translate-x-[385px]'>
                                                         {item.submenu.map((subItem, subIndex) => (
                                                             <li key={subIndex}>
                                                                 <Link href={subItem.link} onClick={() => {
@@ -136,13 +133,13 @@ const Navbar = () => {
                                                     </ul>}
                                                 </div>
                                             </div>
-                                            {!isHome && <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hover:transition-all hover:ease-in-out delay-150 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
+                                            {(pathname === "/job-openings"  ? isHome : !isHome) && <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hover:transition-all hover:ease-in-out delay-150 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
                                                 {/* <div className={`absolute left-0 mt-[40px] w-[100%] bg-au-light-purple hidden group-hover:block`}> */}
                                                 <div className="container mx-auto flex gap-[300px] items-center">
                                                     <p className='text-[20px] font-bold'>
                                                         {innerNav ? currentPath : item.name}
                                                     </p>
-                                                    {!innerNav && <ul className='flex items-center gap-5'>
+                                                    {!innerNav && <ul className='flex items-center gap-5 absolute translate-x-[385px] py-4'>
                                                         {item.submenu.map((subItem, subIndex) => (
                                                             <li key={subIndex}>
                                                                 <Link href={subItem.link} onClick={() => {
