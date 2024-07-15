@@ -16,7 +16,7 @@ const Footer = () => {
                   categoryName: "University",
                   children: [
                     { text: "Webmail", linkTo: "#" },
-                    { text: "Student Information System", linkTo: "#" },
+                    { text: "Student Information", linkTo: "#" },
                     { text: "Academic Calender", linkTo: "#" },
                     { text: "Institutional Repository", linkTo: "#" },
                   ],
@@ -92,7 +92,7 @@ const Footer = () => {
                           return (
                             <li
                               key={idx}
-                              className={`block text-[16px] leading-[21px] text-redish-20`}
+                              className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
                             >
                               {item.isLink ? (
                                 !item?.ext ? (
@@ -134,7 +134,7 @@ const Footer = () => {
 
         </div>
         {/* Contact Us */}
-        <div className=''>
+        <div className='pt-[50px] lg:pt-0'>
           <h1 className='text-4xl py-[30px]'>Contact Us</h1>
           <div className='footer-text'>
             <div className={` grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] lg:gap-0`}>
@@ -211,7 +211,7 @@ const Footer = () => {
                           return (
                             <li
                               key={idx}
-                              className={`block text-[16px] leading-[21px] text-redish-20`}
+                              className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
                             >
                               {item.isLink ? (
                                 !item?.ext ? (

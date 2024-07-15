@@ -75,15 +75,15 @@ const Navbar = () => {
             // isOuterNav ?  setInnerNav(false) :
              setInnerNav(true)
         }
-    }, [currentPath, innerNav, isOuterNav])
+    }, [currentPath, innerNav])
 
 
     return (
         <>
             <MobileNav open={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
-            <nav className={`${isHome ? "absolute" : "relative"} w-full border-b border-au-white mb-[100px]`}>
-                <div className="2xl:w-[1440px] 2xl:mx-auto py-2.5 px-5 2xl:px-0">
-                    <div className='flex justify-between items-center xl:hidden px-4'>
+            <nav className={`${isHome ? "absolute" : "relative"} w-full border-b border-au-white lg:mb-[60px]`}>
+                <div className="2xl:w-[1440px] 2xl:mx-auto py-2.5 lg:px-2.5 2xl:px-0">
+                    <div className='flex justify-between items-center lg:hidden px-4'>
                         <Link href="/">
                             <div className="relative h-12 w-12">
                                 <Image
@@ -98,7 +98,7 @@ const Navbar = () => {
                             className={`w-10 h-10 ${isHome ? "text-au-white" : "text-au-100-black"}`} />
 
                     </div>
-                    <div className="hidden xl:flex justify-between items-center">
+                    <div className="hidden lg:flex justify-between items-center">
                         <Link href="/" className="relative h-6 w-6 sm:h-20 sm:w-20">
                             <Image
                                 src="/assets/au-web-logo-d.png"
@@ -117,12 +117,14 @@ const Navbar = () => {
                                     <Link href={item.link} onClick={() => {
                                         setInnerNav(false)
                                         setIsInnerNav(false)
-
+                                        setCurrentPath(item.name)
+                                        setPrevPath(item.name)
                                     }}
                                         onMouseEnter={() => {
                                             setCurrentPath(item.name)
-                                            // setInnerNav(false)
-                                            // setIsInnerNav(false)
+                                            // setPrevPath(item.name)
+                                            setInnerNav(false)
+                                            setIsInnerNav(false)
                                             // setCurrentinnerPath(false)
                                             setIsOuterNav(true)
                                             isInnerNav && setInnerNav(false)
@@ -163,6 +165,7 @@ const Navbar = () => {
                                                                         setIsInnerNav(true)
                                                                         setCurrentPath(subItem.name)
                                                                         setPrevPath(subItem.name)
+                                                                        localStorage.setItem("currentpath", subItem.name)
                                                                         // } 
                                                                         // else {
                                                                         //     setInnerNav(false)
@@ -179,8 +182,9 @@ const Navbar = () => {
                                                         {getSubmenuByName(menuData, currentPath).map((subItem: any, subIndex: any) => (
                                                             <li key={subIndex}>
                                                                 <Link href={subItem.link} onClick={() => {
-                                                                    setCurrentPath(subItem.name)
-                                                                    setPrevPath(subItem.name)
+                                                                    // setCurrentPath(subItem.name)
+                                                                    // setPrevPath(subItem.name)
+                                                                    localStorage.setItem("currentpath", subItem.name)
                                                                 }} className="block py-4">{subItem.name}
                                                                 </Link>
                                                             </li>
@@ -188,7 +192,8 @@ const Navbar = () => {
                                                     </ul>}
                                                 </div>
                                             </div>
-                                            {(pathname === "/job-openings" ? isHome : !isHome) && <div className={`absolute left-0 mt-[40px] w-[100%] text-au-white bg-au-burgundy hover:transition-all hover:ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-0 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
+                                            {(pathname === "/job-openings" ? isHome : !isHome) && <div 
+                                            className={`absolute left-0 mt-[40px] w-[100%] text-au-white bg-au-burgundy hover:transition-all hover:ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-0 ${pathname.startsWith(item.link) && "block z-[5]"}`}>
                                                 <div className="2xl:w-[1440px] 2xl:mx-auto px-5 2xl:px-0 flex justify-between items-center ">
                                                     <div className='py-4'>
                                                         <p className='text-[20px] font-bold'>
@@ -209,13 +214,14 @@ const Navbar = () => {
                                                                         setIsOuterNav(false)
                                                                         setCurrentPath(subItem.name)
                                                                         setPrevPath(subItem.name)
+                                                                        localStorage.setItem("currentpath", subItem.name)
                                                                         // } 
                                                                         // else {
                                                                         //     setInnerNav(false)
                                                                         //     setIsInnerNav(false)
                                                                         //     setCurrentPath(subItem.name)
                                                                         // }
-                                                                    }} className="block py-4">{subItem.name}
+                                                                    }} className={`block py-4 ${currentPath === subItem.name ? "font-bold text-bold" : ""}`}>{subItem.name}
                                                                     </Link>
                                                                 </li>
                                                             ))}
@@ -225,9 +231,10 @@ const Navbar = () => {
                                                         {getSubmenuByName(menuData, currentPath).map((subItem: any, subIndex: any) => (
                                                             <li key={subIndex} className=''>
                                                                 <Link href={subItem.link} onClick={() => {
-                                                                    setCurrentPath(subItem.name)
-                                                                    setPrevPath(subItem.name)
-                                                                }} className="">{subItem.name}
+                                                                    // setCurrentPath(subItem.name)
+                                                                    // setPrevPath(subItem.name)
+                                                                    localStorage.setItem("currentpath", subItem.name)
+                                                                }} className={`${currentPath === subItem.name ? "font-bold text-bold" : ""}`}>{subItem.name}
                                                                 </Link>
                                                             </li>
                                                         ))}
