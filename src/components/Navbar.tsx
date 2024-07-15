@@ -57,9 +57,11 @@ const Navbar = () => {
     }, [isMobileMenuOpen])
 
     useEffect(() => {
-        console.log(subClicked)
-        console.log(currentPath)
-    }, [currentPath])
+        const pathFromLocalStorage = typeof localStorage !== 'undefined' ? localStorage.getItem("currentpath") : null;
+        const current_path = pathFromLocalStorage ? pathFromLocalStorage : "";
+        setCurrentPath(current_path)
+        setPrevPath(current_path)
+    }, [])
 
 
     useEffect(() => {
@@ -76,7 +78,6 @@ const Navbar = () => {
              setInnerNav(true)
         }
     }, [currentPath, innerNav])
-
 
     return (
         <>
@@ -99,7 +100,7 @@ const Navbar = () => {
 
                     </div>
                     <div className="hidden lg:flex justify-between items-center">
-                        <Link href="/" className="relative h-6 w-6 sm:h-20 sm:w-20">
+                        <Link href="/" onClick={() => setCurrentPath("")} className="relative h-6 w-6 sm:h-20 sm:w-20">
                             <Image
                                 src="/assets/au-web-logo-d.png"
                                 fill
@@ -119,6 +120,7 @@ const Navbar = () => {
                                         setIsInnerNav(false)
                                         setCurrentPath(item.name)
                                         setPrevPath(item.name)
+                                        localStorage.setItem("currentpath", item.name)
                                     }}
                                         onMouseEnter={() => {
                                             setCurrentPath(item.name)
