@@ -38,8 +38,8 @@ export const menuData = [
                     { name: 'Fees', link: '/admission/undergraduate-programs/fees' }
                 ]
             },
-            { name: 'Our Campus', link: '#' },
-            { name: 'Contact Us', link: '#' },
+            { name: 'Our Campus', link: '/admission/our-campus' },
+            { name: 'Contact Us', link: '/admission/contact-us' },
         ]
     },
     {

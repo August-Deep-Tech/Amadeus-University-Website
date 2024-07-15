@@ -13,9 +13,13 @@ interface MenuItem {
 interface MobileNavProps {
     open: boolean;
     setIsOpen: (open: boolean) => void;
+    currentPath: any,
+    setCurrentPath: any,
+    prevPath: any,
+    setPrevPath: any;
 }
 
-const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen }) => {
+const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen, setPrevPath, prevPath, setCurrentPath, currentPath }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [openSubmenuIndex, setOpenSubmenuIndex] = useState<number | null>(null);
     const [openNestedSubmenuIndex, setOpenNestedSubmenuIndex] = useState<{ parentIndex: number, childIndex: number } | null>(null);
@@ -52,7 +56,12 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen }) => {
                         <div key={index} className="py-0">
                             <div className="flex justify-between items-center">
                                 <Link href={item.link}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => { 
+                                        setIsOpen(false)
+                                        setCurrentPath(item.name)
+                                        setPrevPath(item.name)
+                                        localStorage.setItem("currentpath", item.name)
+                                    }}
                                     className="block py-2 text-au-true-black hover:text-au-burgundy">{item.name}</Link>
                                 {item.submenu && (
                                     <button onClick={() => toggleSubmenu(index)} className="ml-2">
@@ -66,7 +75,15 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen }) => {
                                         <li key={subIndex} className="py-1">
                                             <div className="flex justify-between items-center">
                                                 <Link href={subItem.link}
-                                                    onClick={() => setIsOpen(false)}
+                                                    onClick={() => 
+                                                        {
+                                                            setIsOpen(false) 
+                                                            setCurrentPath(item.name)
+                                                            setPrevPath(item.name)
+                                                            localStorage.setItem("currentpath", item.name)
+                                                        }
+
+                                                    }
                                                     className="block py-0 text-au-true-black hover:text-au-burgundy">{subItem.name}</Link>
                                                 {subItem.submenu && (
                                                     <button onClick={() => toggleNestedSubmenu(index, subIndex)} className="ml-2">
@@ -79,7 +96,12 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen }) => {
                                                     {subItem.submenu.map((nestedItem: MenuItem, nestedIndex: number) => (
                                                         <li key={nestedIndex}>
                                                             <Link href={nestedItem.link}
-                                                                onClick={() => setIsOpen(false)}
+                                                                onClick={() => {
+                                                                    setIsOpen(false) 
+                                                                    setCurrentPath(item.name)
+                                                                    setPrevPath(item.name)
+                                                                    localStorage.setItem("currentpath", item.name)
+                                                                }}
                                                                 className="block py-1 text-au-true-black hover:text-au-burgundy">{nestedItem.name}</Link>
                                                         </li>
                                                     ))}
