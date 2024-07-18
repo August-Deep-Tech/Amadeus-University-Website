@@ -71,7 +71,6 @@ const Navbar = () => {
             setInnerNav(false)
         } else {
             setCurrentinnerPath(true)
-            // isOuterNav ?  setInnerNav(false) :
              setInnerNav(true)
         }
     }, [currentPath, innerNav])
@@ -196,10 +195,7 @@ const Navbar = () => {
                                                 <div className="2xl:w-[1440px] 2xl:mx-auto px-5 2xl:px-0 flex justify-between items-center ">
                                                     <div className='py-4'>
                                                         <p className='text-[20px] font-bold'>
-                                                            {/* {innerNav ? currentPath : item.name} */}
                                                             {currentPath.length === 0 ? item.name : currentPath}
-                                                            {/* {currentPath}
-                                                            {pathname} */}
                                                         </p>
                                                     </div>
                                                     <div className="">
@@ -207,19 +203,11 @@ const Navbar = () => {
                                                             {item.submenu.map((subItem, subIndex) => (
                                                                 <li key={subIndex}>
                                                                     <Link href={subItem.link} onClick={() => {
-                                                                        // if (currentinnerPath) {
-                                                                        // setInnerNav(true)
                                                                         setIsInnerNav(true)
                                                                         setIsOuterNav(false)
                                                                         setCurrentPath(subItem.name)
                                                                         setPrevPath(subItem.name)
                                                                         localStorage.setItem("currentpath", subItem.name)
-                                                                        // } 
-                                                                        // else {
-                                                                        //     setInnerNav(false)
-                                                                        //     setIsInnerNav(false)
-                                                                        //     setCurrentPath(subItem.name)
-                                                                        // }
                                                                     }} className={`block py-4 ${currentPath === subItem.name ? "font-bold text-bold" : ""}`}>{subItem.name}
                                                                     </Link>
                                                                 </li>
