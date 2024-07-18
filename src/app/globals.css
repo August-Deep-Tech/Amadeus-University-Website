@@ -80,3 +80,17 @@ html {
   animation: pulseTwo 3s ease-in-out infinite;
   animation-direction: alternate;
 }
+
+.ContentContainer {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .ContentContainer {
+    width: 700px;
+  }
+}
