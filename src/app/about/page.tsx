@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import ContentContainer from '@/components/ContentContainer';
 
 const About = () => {
   return (
@@ -12,7 +13,12 @@ const About = () => {
           className='object-cover'
         />
       </div>
-      About Amadeus
+      <ContentContainer>
+        <div className='text-au-100-black flex flex-col gap-[30px] py-[100px]'>
+          <h1 className='text-[40px] leading-[52px] font-light'>Educating Ethical, Entrepreneurial Leaders with the Compassion and Courage to Transform Africa</h1>
+          <p className='text-[24px] leading-[38px] font-light'>Ashesi University's mission is to propel an African renaissance by educating ethical, entrepreneurial leaders. Located in Ghana, this private, non-profit university combines a rigorous multidisciplinary core with degree programs in Computer Science, Business Administration, Management Information Systems, and Engineering. A student-led honour code, integrated community service, diverse internships, and real-world projects prepare students to develop innovative solutions for the challenges facing their individual communities, countries and the continent at large.</p>
+        </div>
+      </ContentContainer>
     </div>
   )
 }
