@@ -10,7 +10,7 @@ const About = () => {
       <ImageBanner src="/assets/about/overview/overview-1.jpg" />
       {/* text writeup */}
       <div className="ContentContainer">
-        <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[100px]">
+        <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
           <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             Educating Ethical, Entrepreneurial Leaders with the Compassion and
             Courage to Transform Africa
