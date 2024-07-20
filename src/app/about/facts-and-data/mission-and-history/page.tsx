@@ -68,19 +68,20 @@ const toggleBarData: ToggleBarProps[] = [
           <p className="text-2xl font-light">
             These words inspired by Johann Wolfgang von Goethe, are the
             inspiration behind the university&apos;s name, Ashesi, which means
-            "beginning" in Fante (a native Ghanaian language). Ashesi&apos;s
-            founder, Patrick Awuah, first read Goethe&apos;s words at a time
-            when he was still questioning the wisdom of undertaking such an
-            ambitious project. Encouraged by Goethe&apos;s words, he began by
-            undertaking a feasibility study of his idea. Clarifying the risks
-            and issues at hand helped Awuah shed his reservations until one day
-            he realized that he had lost his hesitation and had become very
-            committed to this project. He told himself, "This really is the
-            beginning!" But the name Ashesi is not only about its founder&apos;s
-            inspiration. It is also about providing a new beginning for every
-            student who comes here. And about building an institution that
-            reinvents itself to fit the changing needs of society; one that
-            grows by replicating its philosophy throughout Ghana and Africa.
+            &quot;beginning&quot; in Fante (a native Ghanaian language).
+            Ashesi&apos;s founder, Patrick Awuah, first read Goethe&apos;s words
+            at a time when he was still questioning the wisdom of undertaking
+            such an ambitious project. Encouraged by Goethe&apos;s words, he
+            began by undertaking a feasibility study of his idea. Clarifying the
+            risks and issues at hand helped Awuah shed his reservations until
+            one day he realized that he had lost his hesitation and had become
+            very committed to this project. He told himself, &quot;This really
+            is the beginning!&quot; But the name Ashesi is not only about its
+            founder&apos;s inspiration. It is also about providing a new
+            beginning for every student who comes here. And about building an
+            institution that reinvents itself to fit the changing needs of
+            society; one that grows by replicating its philosophy throughout
+            Ghana and Africa.
           </p>
         </div>
       </div>
