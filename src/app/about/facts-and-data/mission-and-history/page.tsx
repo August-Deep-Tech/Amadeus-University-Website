@@ -32,7 +32,7 @@ const toggleBarData: ToggleBarProps[] = [
     ),
   },
   {
-    title: "Amadeus' History",
+    title: "History of Amadeus",
     content: (
       <div className="flex flex-col gap-6">
         {/* history */}
@@ -44,11 +44,11 @@ const toggleBarData: ToggleBarProps[] = [
             in 1985 to attend Swarthmore College on a full scholarship, after
             which he worked for Microsoft Corporation as an engineer and a
             program manager for eight years. Experiencing firsthand the dramatic
-            impact that education can have on one's life, Awuah embarked on a
-            mission in 1997 to provide greater educational opportunities in
+            impact that education can have on one&apos;s life, Awuah embarked on
+            a mission in 1997 to provide greater educational opportunities in
             Ghana. He enrolled in business school at the University of
-            California at Berkeley's Haas School of Business, both to evaluate
-            the feasibility of his goal and to gain a broader range of
+            California at Berkeley&apos;s Haas School of Business, both to
+            evaluate the feasibility of his goal and to gain a broader range of
             managerial skills with which to found and manage a university.
           </p>
         </div>
@@ -67,20 +67,20 @@ const toggleBarData: ToggleBarProps[] = [
           </h2>
           <p className="text-2xl font-light">
             These words inspired by Johann Wolfgang von Goethe, are the
-            inspiration behind the university's name, Ashesi, which means
-            "beginning" in Fante (a native Ghanaian language). Ashesi's founder,
-            Patrick Awuah, first read Goethe's words at a time when he was still
-            questioning the wisdom of undertaking such an ambitious project.
-            Encouraged by Goethe's words, he began by undertaking a feasibility
-            study of his idea. Clarifying the risks and issues at hand helped
-            Awuah shed his reservations until one day he realized that he had
-            lost his hesitation and had become very committed to this project.
-            He told himself, "This really is the beginning!" But the name Ashesi
-            is not only about its founder's inspiration. It is also about
-            providing a new beginning for every student who comes here. And
-            about building an institution that reinvents itself to fit the
-            changing needs of society; one that grows by replicating its
-            philosophy throughout Ghana and Africa.
+            inspiration behind the university&apos;s name, Ashesi, which means
+            "beginning" in Fante (a native Ghanaian language). Ashesi&apos;s
+            founder, Patrick Awuah, first read Goethe&apos;s words at a time
+            when he was still questioning the wisdom of undertaking such an
+            ambitious project. Encouraged by Goethe&apos;s words, he began by
+            undertaking a feasibility study of his idea. Clarifying the risks
+            and issues at hand helped Awuah shed his reservations until one day
+            he realized that he had lost his hesitation and had become very
+            committed to this project. He told himself, "This really is the
+            beginning!" But the name Ashesi is not only about its founder&apos;s
+            inspiration. It is also about providing a new beginning for every
+            student who comes here. And about building an institution that
+            reinvents itself to fit the changing needs of society; one that
+            grows by replicating its philosophy throughout Ghana and Africa.
           </p>
         </div>
       </div>
