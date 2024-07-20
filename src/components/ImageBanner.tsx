@@ -4,11 +4,18 @@ import Image from "next/image";
 interface ImageBannerProps {
   src: string;
   alt?: string;
+  heightClass?: string;
 }
 
-const ImageBanner: React.FC<ImageBannerProps> = ({src, alt = "Image"}) => {
+const ImageBanner: React.FC<ImageBannerProps> = ({
+  src,
+  alt = "Image",
+  heightClass,
+}) => {
+  const defaultHeightClasses = "h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[33.25rem]";
+
   return (
-    <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[33.25rem]">
+    <div className={`relative w-full ${heightClass || defaultHeightClasses}`}>
       <Image
         src={src}
         fill
