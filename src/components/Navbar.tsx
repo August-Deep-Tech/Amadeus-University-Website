@@ -50,12 +50,10 @@ const Navbar = () => {
 
     useEffect(() => {
         const name = findMenuItemByLink(menuData, pathname);
-        if (name.submenu === null) {
+        if (name?.submenu === null) {
             const nameTwo = findHighestLevelNameByLink(menuData, pathname);
-            console.log(nameTwo)
             const nameThree = findMenuItemByLink(menuData, nameTwo);
             if (nameThree !== null) {
-                console.log(nameThree)
                 if (nameThree.submenu !== null) {
                     setCurrentItem(nameThree)
                     setprevItem(nameThree)
@@ -71,7 +69,7 @@ const Navbar = () => {
 
     const findMenuItemByLink = (data: any[], link: string): any | null => {
         for (const item of data) {
-            if (item.link === link) {
+            if (item?.link === link) {
                 return { name: item.name, link: item.link, submenu: item.submenu || null };
             }
             if (item.submenu) {
@@ -105,7 +103,7 @@ const Navbar = () => {
 
     const handleClick = (link: string) => {
         const item = findMenuItemByLink(menuData, link);
-        if (item.submenu !== null) {
+        if (item?.submenu !== null) {
             setCurrentItem(item);
         }
     };
@@ -177,9 +175,9 @@ const Navbar = () => {
                                             }  ${pathname.startsWith(item.link) ? "border-b-4" : ""
                                             } border-au-burgundy`}
                                     >
-                                        {item.name}
+                                        {item?.name}
                                     </Link>
-                                    {item.submenu.length > 0 && (
+                                    {item?.submenu.length > 0 && (
                                         <div>
                                             <div
                                                 onMouseLeave={() => {
@@ -191,24 +189,24 @@ const Navbar = () => {
                                             >
                                                 <div className="2xl:w-[1440px] 2xl:mx-auto px-5 2xl:px-0 flex justify-between items-center ">
                                                     <p className="text-[20px] font-bold py-4">
-                                                        {currentItem?.name.length === 0 ? item.name : currentItem?.name}
+                                                        {currentItem?.name?.length === 0 ? item.name : currentItem?.name}
                                                     </p>
                                                     <div className="">
                                                         <ul className={`flex items-center gap-5`}>
                                                             {currentItem?.submenu && currentItem?.submenu.map((subItem, subIndex) => (
                                                                 <li key={subIndex}>
                                                                     <Link
-                                                                        href={subItem.link}
+                                                                        href={subItem?.link}
                                                                         onClick={() => {
                                                                             handleClick(subItem.link);
-                                                                            setCurrentPath(item.name)
+                                                                            setCurrentPath(item?.name)
                                                                         }}
-                                                                        className={`block py-4 ${currentItem?.name === subItem.name
+                                                                        className={`block py-4 ${currentItem?.name === subItem?.name
                                                                             ? "font-bold text-bold"
                                                                             : ""
                                                                             }`}
                                                                     >
-                                                                        {subItem.name} {currentItem?.name} {currentItem?.name === subItem.name ? "0" : "1"}
+                                                                        {subItem?.name}
                                                                     </Link>
                                                                 </li>
                                                             ))}
