@@ -62,7 +62,7 @@ const Navbar = () => {
                 }
             }
         } else {
-           if (name !== null) {
+            if (name !== null) {
                 setCurrentItem(name)
                 setprevItem(name)
             }
@@ -105,8 +105,6 @@ const Navbar = () => {
 
     const handleClick = (link: string) => {
         const item = findMenuItemByLink(menuData, link);
-        console.log("handleClick", item.submenu)
-        console.log("handleClickItem", item)
         if (item.submenu !== null) {
             setCurrentItem(item);
         }
@@ -185,7 +183,9 @@ const Navbar = () => {
                                         <div>
                                             <div
                                                 onMouseLeave={() => {
-                                                    handleClick(prevItem?.link);
+                                                    if (prevItem?.link && prevItem.link.length > 0) {
+                                                        handleClick(prevItem.link);
+                                                    }
                                                 }}
                                                 className={`absolute left-0 mt-[40px] w-[100%] bg-au-burgundy text-au-white group-hover:block group-hover:z-[10] hover:transition-all hover:ease-[cubic-bezier(0.4, 0, 0.2, 1)] duration-0 block ${!isHome ? "z-[5]" : "hidden"}`}
                                             >
@@ -208,7 +208,7 @@ const Navbar = () => {
                                                                             : ""
                                                                             }`}
                                                                     >
-                                                                        {subItem.name}
+                                                                        {subItem.name} {currentItem?.name} {currentItem?.name === subItem.name ? "0" : "1"}
                                                                     </Link>
                                                                 </li>
                                                             ))}
