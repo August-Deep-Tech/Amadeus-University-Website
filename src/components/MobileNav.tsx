@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
 import { ChevronDown, ChevronUp, X } from 'lucide-react';
 
-// Define a type for the menuData structure
 interface MenuItem {
     name: string;
     link: string;
@@ -13,20 +12,16 @@ interface MenuItem {
 interface MobileNavProps {
     open: boolean;
     setIsOpen: (open: boolean) => void;
-    currentPath: any,
-    setCurrentPath: any,
-    prevPath: any,
-    setPrevPath: any;
 }
 
-const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen, setPrevPath, prevPath, setCurrentPath, currentPath }) => {
+const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [openSubmenuIndex, setOpenSubmenuIndex] = useState<number | null>(null);
     const [openNestedSubmenuIndex, setOpenNestedSubmenuIndex] = useState<{ parentIndex: number, childIndex: number } | null>(null);
 
     const toggleSubmenu = (index: number) => {
         setOpenSubmenuIndex(prevIndex => prevIndex === index ? null : index);
-        setOpenNestedSubmenuIndex(null); // Close any open nested submenu
+        setOpenNestedSubmenuIndex(null); 
     };
 
     const toggleNestedSubmenu = (parentIndex: number, childIndex: number) => {
@@ -58,9 +53,6 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen, setPrevPath, prevPath,
                                 <Link href={item.link}
                                     onClick={() => { 
                                         setIsOpen(false)
-                                        setCurrentPath(item.name)
-                                        setPrevPath(item.name)
-                                        localStorage.setItem("currentpath", item.name)
                                     }}
                                     className="block py-2 text-au-true-black hover:text-au-burgundy">{item.name}</Link>
                                 {item.submenu && (
@@ -77,10 +69,7 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen, setPrevPath, prevPath,
                                                 <Link href={subItem.link}
                                                     onClick={() => 
                                                         {
-                                                            setIsOpen(false) 
-                                                            setCurrentPath(item.name)
-                                                            setPrevPath(item.name)
-                                                            localStorage.setItem("currentpath", item.name)
+                                                            setIsOpen(false)
                                                         }
 
                                                     }
@@ -97,10 +86,7 @@ const MobileNav: FC<MobileNavProps> = ({ open, setIsOpen, setPrevPath, prevPath,
                                                         <li key={nestedIndex}>
                                                             <Link href={nestedItem.link}
                                                                 onClick={() => {
-                                                                    setIsOpen(false) 
-                                                                    setCurrentPath(item.name)
-                                                                    setPrevPath(item.name)
-                                                                    localStorage.setItem("currentpath", item.name)
+                                                                    setIsOpen(false)
                                                                 }}
                                                                 className="block py-1 text-au-true-black hover:text-au-burgundy">{nestedItem.name}</Link>
                                                         </li>
