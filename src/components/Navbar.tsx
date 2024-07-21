@@ -208,7 +208,7 @@ const Navbar = () => {
                                                                             : ""
                                                                             }`}
                                                                     >
-                                                                        {subItem.name} {currentItem?.name} {currentItem?.name === subItem.name ? "0" : "1"}
+                                                                        {subItem.name}
                                                                     </Link>
                                                                 </li>
                                                             ))}
