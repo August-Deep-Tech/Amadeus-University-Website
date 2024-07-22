@@ -192,7 +192,7 @@ const Navbar = () => {
 
                                         }}
                                         className={`${isHome ? "text-au-white" : "text-au-true-black"
-                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 group-hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentItem?.name && "border-b-4"
+                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentItem?.name && "border-b-4"
                                             }  ${pathname.startsWith(item.link) ? "border-b-4" : ""
                                             } border-au-burgundy`}
                                     >
