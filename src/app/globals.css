@@ -21,7 +21,7 @@ html {
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 1)
     ),
-    url(https://www.ashesi.edu.gh/images/news_events/news/2024/June/Ashesi_UofT_Patrick_Awuah_web.jpg);
+    url(/assets/home/home-1.jpg);
   background-size: cover;
   background-position: top;
   height: 100vh;
