@@ -90,6 +90,7 @@ const Navbar = () => {
 
     //         if (item.submenu) {
     //             const found = findHighestLevelNameByLink(item.submenu, link);
+    //             console.log("found", found)
     //             if (found) {
     //                 return item.link;
     //             }
@@ -108,9 +109,10 @@ const Navbar = () => {
                 const found = findHighestLevelNameByLink(item.submenu, link);
                 if (found) {
                     return { name: item.name, link: item.link, submenu: item.submenu || null };
-                } else {
-                    return item.link;
-                }
+                } 
+                // else {
+                //     return item.link;
+                // }
             }
         }
         return null;
