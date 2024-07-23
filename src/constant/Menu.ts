@@ -45,7 +45,10 @@ export const menuData = [
       //   ],
       // },
       {name: "Our Campus", link: "/about/our-campus"},
-      {name: "Job Openings", link: "/about/job-openings"},
+      {
+        name: "Job Openings",
+        link: "https://recruitment.amadeusuniversity.org/",
+      },
       {
         name: "Alumni",
         link: "/about/alumni",
