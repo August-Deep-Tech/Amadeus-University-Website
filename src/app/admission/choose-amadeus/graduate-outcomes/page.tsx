@@ -11,7 +11,7 @@ const GraduateOutcomes = () => {
                     </h1>
                     <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
                         Our graduates have the knowledge and skills they need to solve problems today and the foresight to lead.
-                        Which is why Ashesi alumni are found in some of the world's strongest organisations and graduate schools.
+                        Which is why Ashesi alumni are found in some of the world{"'"}s strongest organisations and graduate schools.
                         Since inception, 90% of our graduates - from 30+ countries across Africa - have received placement offers
                         within six months of graduation (or national service) and are recognised among the world{"'"}s best.
                         Over a 100 businesses across Africa have been founded by Ashesi alumni.
@@ -24,7 +24,7 @@ const GraduateOutcomes = () => {
                     <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
                         Over 300 organisations have recruited from Ashesi since our inception, and each year some 60 organisations
                         attend our career fairs to identify and recruit talent. Across Africa and beyond, Ashesi alumni are considered
-                        as some of the continent's strongest ambassadors. Our alumni also attend some of the world's best graduate schools,
+                        as some of the continent{"'"}s strongest ambassadors. Our alumni also attend some of the world{"'"}s best graduate schools,
                         and experience success buoyed by their learning experience at Ashesi. No matter where you find them - from Microsoft
                         to Amazon, Accra to Hong Kong - Ashesi alumni stand out.
 
