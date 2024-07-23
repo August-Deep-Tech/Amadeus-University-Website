@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { menuData } from "@/constant/Menu";
 import { Menu } from "lucide-react";
@@ -35,6 +35,8 @@ const Navbar = () => {
                 .toLowerCase()
                 .split('/')
                 .some(segment => normalizeString(segment) === normalizedSearchString);
+                console.log(containsSearchString)
+                console.log(normalizedSearchString)
             if (containsSearchString) {
                 console.log(`The path contains the normalized search string: "${normalizedSearchString}"`);
             }
@@ -48,21 +50,20 @@ const Navbar = () => {
         };
     }, [pathname, currentPath]);
 
+
     useEffect(() => {
-        const name = findMenuItemByLink(menuData, pathname);
-        if (name?.submenu === null) {
-            const nameTwo = findHighestLevelNameByLink(menuData, pathname);
-            const nameThree = findMenuItemByLink(menuData, nameTwo);
-            if (nameThree !== null) {
-                if (nameThree.submenu !== null) {
-                    setCurrentItem(nameThree)
-                    setprevItem(nameThree)
-                }
+        const item = findMenuItemByLink(menuData, pathname);
+        if (!item?.submenu) {
+            const highestLevelItem = findHighestLevelNameByLink(menuData, pathname);
+            const parentItem = findMenuItemByLink(menuData, highestLevelItem?.link || '');
+            if (parentItem?.submenu) {
+                setCurrentItem(parentItem);
+                setprevItem(parentItem);
             }
         } else {
-            if (name !== null) {
-                setCurrentItem(name)
-                setprevItem(name)
+            if (item) {
+                setCurrentItem(item);
+                setprevItem(item);
             }
         }
     }, [pathname]);
@@ -82,37 +83,17 @@ const Navbar = () => {
         return null;
     };
 
-    // const findHighestLevelNameByLink = (data: any[], link: string): any | null => {
-    //     for (const item of data) {
-    //         if (item.link === link) {
-    //             return { name: item.name, link: item.link, submenu: item.submenu || null };
-    //         }
-
-    //         if (item.submenu) {
-    //             const found = findHighestLevelNameByLink(item.submenu, link);
-    //             console.log("found", found)
-    //             if (found) {
-    //                 return item.link;
-    //             }
-    //         }
-    //     }
-    //     return null;
-    // };
-
-    const findHighestLevelNameByLink = (data: any[], link: string): any | null => {
+    const findHighestLevelNameByLink = (data: any[], link: string, parent: any = null): any | null => {
         for (const item of data) {
             if (item.link === link) {
-                return { name: item.name, link: item.link, submenu: item.submenu || null };
+                return parent ? parent : item;
             }
-
+            
             if (item.submenu) {
-                const found = findHighestLevelNameByLink(item.submenu, link);
+                const found = findHighestLevelNameByLink(item.submenu, link, item);
                 if (found) {
-                    return { name: item.name, link: item.link, submenu: item.submenu || null };
-                } 
-                // else {
-                //     return item.link;
-                // }
+                    return found;
+                }
             }
         }
         return null;
@@ -124,8 +105,7 @@ const Navbar = () => {
 
     const handleClick = (link: string) => {
         const item = findMenuItemByLink(menuData, link);
-        const items = findHighestLevelNameByLink(menuData, link);
-        console.log(items)
+        console.log(item)
         if (item?.submenu !== null) {
             setCurrentItem(item);
         }
