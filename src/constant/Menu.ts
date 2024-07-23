@@ -93,41 +93,158 @@ export const menuData = [
       {name: "Contact Us", link: "/admission/contact-us"},
     ],
   },
+  // academics nav menu
   {
     name: "Academics",
     link: "/academics",
     submenu: [
-      {name: "Overview", link: "/academics"},
       {
-        name: "Programmes",
-        link: "/academics/programmes",
+        name: "Faculties",
+        link: "/academics/faculties",
         submenu: [
+          // faculty of social and managemwnt sciences
           {
-            name: "Overview",
-            link: "/academics/programmes",
+            name: "Faculty of Social and Management Sciences",
+            link: "/academics/faculties/faculty-of-social-and-management-sciences",
+            submenu: [
+              {
+                name: "People",
+                link: "/academics/faculties/faculty-of-social-and-management-sciences/people",
+              },
+              {
+                name: "Programmes",
+                link: "/academics/faculties/faculty-of-social-and-management-sciences/programmes/description",
+                submenu: [
+                  {
+                    name: "Description",
+                    link: "/academics/faculties/faculty-of-social-and-management-sciences/programmes/description",
+                  },
+                  {
+                    name: "Entry Requirements",
+                    link: "/academics/faculties/faculty-of-social-and-management-sciences/programmes/entry-requirements",
+                  },
+                ],
+              },
+            ],
           },
-          {name: "Humanities", link: "/academics/programmes/humanities"},
+          // faculty of science
           {
-            name: "Economic & Business",
-            link: "/academics/programmes/economics-and-business",
+            name: "Faculty of Science",
+            link: "/academics/faculties/faculty-of-science",
+            submenu: [
+              {
+                name: "People",
+                link: "/academics/faculties/faculty-of-science/people",
+              },
+              {
+                name: "Programmes",
+                link: "/academics/faculties/faculty-of-science/programmes/description",
+                submenu: [
+                  {
+                    name: "Description",
+                    link: "/academics/faculties/faculty-of-science/programmes/description",
+                  },
+                  {
+                    name: "Entry Requirements",
+                    link: "/academics/faculties/faculty-of-science/programmes/entry-requirements",
+                  },
+                ],
+              },
+            ],
           },
+          // faculty of engineering
           {
-            name: "Computer Science",
-            link: "/academics/programmes/computer-science",
+            name: "Faculty of Engineering",
+            link: "/academics/faculties/faculty-of-engineering",
+            submenu: [
+              {
+                name: "People",
+                link: "/academics/faculties/faculty-of-engineering/people",
+              },
+              {
+                name: "Programmes",
+                link: "/academics/faculties/faculty-of-engineering/programmes/description",
+                submenu: [
+                  {
+                    name: "Description",
+                    link: "/academics/faculties/faculty-of-engineering/programmes/description",
+                  },
+                  {
+                    name: "Entry Requirements",
+                    link: "/academics/faculties/faculty-of-engineering/programmes/entry-requirements",
+                  },
+                ],
+              },
+            ],
           },
-          {name: "Engineering", link: "/academics/programmes/engineering"},
+          // faculty of allied health sciences
+          {
+            name: "Faculty of Allied Health Sciences",
+            link: "/academics/faculties/faculty-of-allied-health-sciences",
+            submenu: [
+              {
+                name: "People",
+                link: "/academics/faculties/faculty-of-allied-health-sciences/people",
+              },
+              {
+                name: "Programmes",
+                link: "/academics/faculties/faculty-of-allied-health-sciences/programmes/description",
+                submenu: [
+                  {
+                    name: "Description",
+                    link: "/academics/faculties/faculty-of-allied-health-sciences/programmes/description",
+                  },
+                  {
+                    name: "Entry Requirements",
+                    link: "/academics/faculties/faculty-of-allied-health-sciences/programmes/entry-requirements",
+                  },
+                ],
+              },
+            ],
+          },
+          // {name: "Humanities", link: "/academics/programmes/humanities"},
+          // {
+          //   name: "Economic & Business",
+          //   link: "/academics/programmes/economics-and-business",
+          // },
+          // {
+          //   name: "Computer Science",
+          //   link: "/academics/programmes/computer-science",
+          // },
+          // {name: "Engineering", link: "/academics/programmes/engineering"},
         ],
       },
-      {name: "Learning Goals", link: "#"},
-      {name: "Academic Registry", link: "#"},
-      {name: "Calendar", link: "#"},
+      // {
+      //   name: "Programmes",
+      //   link: "/academics/programmes",
+      //   submenu: [
+      //     {
+      //       name: "Overview",
+      //       link: "/academics/programmes",
+      //     },
+      //     {name: "Humanities", link: "/academics/programmes/humanities"},
+      //     {
+      //       name: "Economic & Business",
+      //       link: "/academics/programmes/economics-and-business",
+      //     },
+      //     {
+      //       name: "Computer Science",
+      //       link: "/academics/programmes/computer-science",
+      //     },
+      //     {name: "Engineering", link: "/academics/programmes/engineering"},
+      //   ],
+      // },
+      {name: "Learning Goals", link: "/academics/learning-goals"},
+      {name: "Academic Registry", link: "/academics/academic-registry"},
+      // {name: "Calendar", link: "#"},
       {
         name: "Library",
         link: "https://library.amadeusuniversity.org/#/app/landing",
       },
-      {name: "Academic Affairs", link: "#"},
+      // {name: "Academic Affairs", link: "#"},
     ],
   },
+  // student life nav menu
   {
     name: "Student Life",
     link: "/student-life",

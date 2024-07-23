@@ -17,8 +17,8 @@ const LogoAndIdentity = () => {
               <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
                 The Ashesi mark is a visual representation of university&apos;s
                 mission. The lower part of the logo depicts three pillars that
-                correspond to Ashesi's core values of scholarship, leadership,
-                and citizenship.
+                correspond to Ashesi&apos;s core values of scholarship,
+                leadership, and citizenship.
               </p>
               <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
                 The upper part of the Ashesi mark is an eye, which symbolises
@@ -68,7 +68,7 @@ const LogoAndIdentity = () => {
             <h2 className="text-2xl font-bold mb-2">Website Archives</h2>
             <ul className="text-2xl font-light list-disc pl-6">
               <li className="text-au-burgundy underline cursor-pointer">
-                Archive of Ashesi's web sites
+                Archive of Ashesi&apos;s web sites
               </li>
             </ul>
           </div>
