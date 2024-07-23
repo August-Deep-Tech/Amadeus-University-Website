@@ -34,36 +34,37 @@ export const menuData = [
   },
   {
     name: "Admission",
-    link: "/admission",
+    link: "/admission/choose-amadeus/graduate-outcomes",
     submenu: [
-      { name: "Overview", link: "/admission" },
       {
-        name: "Amadeus Advantage",
-        link: "/admission/amadeus-advantage/explore-amadeus",
+        name: "Choose Amadeus",
+        link: "/admission/choose-amadeus/graduate-outcomes",
         submenu: [
-          {
-            name: "Explore Amadeus",
-            link: "/admission/amadeus-advantage/explore-amadeus",
-          },
           {
             name: "Graduate Outcomes",
-            link: "/admission/amadeus-advantage/graduate-outcomes",
+            link: "/admission/choose-amadeus/graduate-outcomes",
           },
+          { name: "Our Campus & Student Life", link: "/admission/choose-amadeus/our-campus" },
         ],
       },
       {
-        name: "Undergraduate Programs",
-        link: "/admission/undergraduate-programs/admissions-process",
+        name: "Undergraduate Programmes",
+        link: "/admission/undergraduate-programmes/tuition-and-fees",
         submenu: [
           {
-            name: "Admissions Process",
-            link: "/admission/undergraduate-programs/admissions-process",
+            name: "Tuition & Fees",
+            link: "/admission/undergraduate-programmes/tuition-and-fees",
           },
-          { name: "Fees", link: "/admission/undergraduate-programs/fees" },
+          { 
+            name: "Scholarships and Financial Aid", 
+            link: "/admission/undergraduate-programmes/scholarships-and-financial-aid",
+          },
+          { 
+            name: "How to Apply", 
+            link: "/admission/undergraduate-programmes/how-to-apply",
+          },
         ],
       },
-      { name: "Our Campus", link: "/admission/our-campus" },
-      { name: "Contact Us", link: "/admission/contact-us" },
     ],
   },
   {
@@ -106,15 +107,15 @@ export const menuData = [
     link: "/student-life",
     submenu: [
       {
-        name: "Student Affairs", 
-        link: "/student-life/student-affairs", 
+        name: "Student Affairs",
+        link: "/student-life/student-affairs",
         submenu: [
           {
             name: "Student Handbook",
             link: "/student-life/student-affairs/student-handbook",
           },
-          { 
-            name: "Honour Code", 
+          {
+            name: "Honour Code",
             link: "/student-life/student-affairs/student-handbook",
           },
           {
