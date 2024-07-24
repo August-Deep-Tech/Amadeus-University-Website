@@ -20,7 +20,7 @@ const ImageCarousel = () => {
       <Slider {...settings}>
         <div className="relative w-full h-screen">
           <Image
-            src="/assets/about/mission-and-history/mission-and-history-1.jpg"
+            src="/assets/about/our-campus/campus-carousel1.jpg"
             alt="Image 1"
             layout="fill"
             objectFit="cover"
@@ -29,7 +29,7 @@ const ImageCarousel = () => {
         </div>
         <div className="relative w-full h-screen">
           <Image
-            src="/assets/about/mission-and-history/mission-and-history-1.jpg"
+            src="/assets/about/our-campus/campus-carousel2.jpg"
             alt="Image 2"
             layout="fill"
             objectFit="cover"
@@ -38,7 +38,7 @@ const ImageCarousel = () => {
         </div>
         <div className="relative w-full h-screen">
           <Image
-            src="/assets/about/mission-and-history/mission-and-history-1.jpg"
+            src="/assets/about/our-campus/campus-carousel3.jpg"
             alt="Image 3"
             layout="fill"
             objectFit="cover"
@@ -47,7 +47,7 @@ const ImageCarousel = () => {
         </div>
         <div className="relative w-full h-screen">
           <Image
-            src="/assets/about/mission-and-history/mission-and-history-1.jpg"
+            src="/assets/about/our-campus/campus-carousel4.jpg"
             alt="Image 4"
             layout="fill"
             objectFit="cover"

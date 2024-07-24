@@ -1,17 +1,19 @@
+"use client";
 import React from "react";
 import ImageCarousel from "@/components/ImageCarousel";
+import Image from "next/image";
 import YoutubeVideoBanner from "@/components/YoutubeVideoBanner";
 import ToggleBar from "@/components/ToggleBar";
 import {ToggleBarProps} from "@/components/ToggleBar";
+// import img1 from "../public/assets/au-web-logo-f-no-bg.png";
 
 const toggleBarData: ToggleBarProps[] = [
   {
-    title: "Our Mission & Vision",
+    title: "An 80-minute drive from Accra's airport",
     content: (
       <div className="flex flex-col gap-6">
-        {/* mission */}
+        {/* writeup*/}
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-2">Mission</h2>
           <p className="text-xl md:text-2xl font-light">
             The mission of Ashesi University is to educate a new generation of
             ethical, entrepreneurial leaders in Africa; to cultivate within our
@@ -19,71 +21,92 @@ const toggleBarData: ToggleBarProps[] = [
             the courage it will take to transform a continent.
           </p>
         </div>
-        {/* vision */}
+        {/* image with caption */}
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-2">Vision</h2>
-          <p className="text-xl md:text-2xl font-light">
-            Our vision is an African renaissance driven by a new generation of
-            ethical, entrepreneurial leaders. We aim to educate such leaders,
-            and to drive a movement in African higher education to scale up the
-            education of such leaders.
-          </p>
+          {/* image */}
+          <Image
+            src="/assets/about/our-campus/campus-dropdown-1.jpg"
+            alt="AU Web Logo"
+            width={900}
+            height={300}
+          />
+
+          {/* caption */}
+          <span className="text-sm">
+            Ashesi's campus is about a 40 minute drive away from Accra's airport
+            central district. Photo by Kwasiog [CC BY-SA 4.0
+            (https://creativecommons.org/licenses/by-sa/4.0)], from Wikimedia
+            Commons
+          </span>
         </div>
       </div>
     ),
   },
   {
-    title: "History of Amadeus",
+    title: "Student Housing & Recreation",
     content: (
       <div className="flex flex-col gap-6">
-        {/* history */}
+        {/* writeup*/}
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-2">History</h2>
           <p className="text-xl md:text-2xl font-light">
-            Ashesi was founded by Patrick Awuah, a Ghanaian who has spent over
-            15 years living and working in the United States. Awuah left Ghana
-            in 1985 to attend Swarthmore College on a full scholarship, after
-            which he worked for Microsoft Corporation as an engineer and a
-            program manager for eight years. Experiencing firsthand the dramatic
-            impact that education can have on one&apos;s life, Awuah embarked on
-            a mission in 1997 to provide greater educational opportunities in
-            Ghana. He enrolled in business school at the University of
-            California at Berkeley&apos;s Haas School of Business, both to
-            evaluate the feasibility of his goal and to gain a broader range of
-            managerial skills with which to found and manage a university.
+            Ashesi provides housing options as part of efforts to enhance the
+            educational experience of its students. By increasing opportunities
+            for teamwork, enabling closer friendships and creating room for
+            community, residential life serves as an important venue for student
+            learning. There are eight lounge areas within the different student
+            dorms, where students can engage in recreational activities, host
+            events or other group activities. There are also two multi-purpose
+            court for sports like basketball and volleyball, and our new sports
+            centre, featuring a football field, running track, and gym, will be
+            completed in September
           </p>
+        </div>
+        {/* image with caption */}
+        <div>
+          {/* image */}
+          <Image
+            src="/assets/about/our-campus/campus-dropdown-2.jpg"
+            alt="AU Web Logo"
+            width={900}
+            height={300}
+          />
+
+          {/* caption */}
+          <span className="text-sm">The Bliss Student Lounge at Ashesi</span>
         </div>
       </div>
     ),
   },
   {
-    title: "Meaning of Amadeus",
+    title: "Natembea Health Centre",
     content: (
       <div className="flex flex-col gap-6">
-        {/* meaning of amadeus */}
+        {/* writeup*/}
         <div>
-          <h2 className="text-xl md:text-2xl font-bold mb-2">
-            If there is anything you can do, or dream you can, begin it.
-            Boldness has genius, power and magic in it. Begin it now.
-          </h2>
           <p className="text-xl md:text-2xl font-light">
-            These words inspired by Johann Wolfgang von Goethe, are the
-            inspiration behind the university&apos;s name, Ashesi, which means
-            &quot;beginning&quot; in Fante (a native Ghanaian language).
-            Ashesi&apos;s founder, Patrick Awuah, first read Goethe&apos;s words
-            at a time when he was still questioning the wisdom of undertaking
-            such an ambitious project. Encouraged by Goethe&apos;s words, he
-            began by undertaking a feasibility study of his idea. Clarifying the
-            risks and issues at hand helped Awuah shed his reservations until
-            one day he realized that he had lost his hesitation and had become
-            very committed to this project. He told himself, &quot;This really
-            is the beginning!&quot; But the name Ashesi is not only about its
-            founder&apos;s inspiration. It is also about providing a new
-            beginning for every student who comes here. And about building an
-            institution that reinvents itself to fit the changing needs of
-            society; one that grows by replicating its philosophy throughout
-            Ghana and Africa.
+            The Natembea Health Centre is an on-campus facility that caters to
+            the community's health needs. The centre ensures high quality health
+            care service for the entire Ashesi Community through health
+            guidance, medical treatment and prevention of disease through health
+            education and counseling. Students who experience severe medical
+            challenges are transported to an off-campus hospital, about 15
+            minutes away from campus, for treatment.
           </p>
+        </div>
+        {/* image with caption */}
+        <div>
+          {/* image */}
+          <Image
+            src="/assets/about/our-campus/campus-dropdown-3.jpg"
+            alt="AU Web Logo"
+            width={900}
+            height={300}
+          />
+
+          {/* caption */}
+          <span className="text-sm">
+            The male ward in the Natembea Health Centre
+          </span>
         </div>
       </div>
     ),
