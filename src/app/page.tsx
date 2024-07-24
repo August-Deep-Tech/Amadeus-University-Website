@@ -34,7 +34,7 @@ export default function Home() {
           <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             Driven by a Singular Purpose
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Our vision is a flourishing Africa whose leaders make ethical decisions in the best interests of their communities,
             and where innovation drives economic, cultural and social growth. We educate leaders who will make this vision a reality,
             and we collaborate with other institutions to multiply this work.
