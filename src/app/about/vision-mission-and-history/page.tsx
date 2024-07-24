@@ -10,8 +10,8 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-6">
         {/* mission */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">Mission</h2>
-          <p className="text-2xl font-light">
+          <h2 className="text-xl md:text-2xl font-bold mb-2">Mission</h2>
+          <p className="text-xl md:text-2xl font-light">
             The mission of Ashesi University is to educate a new generation of
             ethical, entrepreneurial leaders in Africa; to cultivate within our
             students the critical thinking skills, the concern for others and
@@ -20,8 +20,8 @@ const toggleBarData: ToggleBarProps[] = [
         </div>
         {/* vision */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">Vision</h2>
-          <p className="text-2xl font-light">
+          <h2 className="text-xl md:text-2xl font-bold mb-2">Vision</h2>
+          <p className="text-xl md:text-2xl font-light">
             Our vision is an African renaissance driven by a new generation of
             ethical, entrepreneurial leaders. We aim to educate such leaders,
             and to drive a movement in African higher education to scale up the
@@ -37,8 +37,8 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-6">
         {/* history */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">History</h2>
-          <p className="text-2xl font-light">
+          <h2 className="text-xl md:text-2xl font-bold mb-2">History</h2>
+          <p className="text-xl md:text-2xl font-light">
             Ashesi was founded by Patrick Awuah, a Ghanaian who has spent over
             15 years living and working in the United States. Awuah left Ghana
             in 1985 to attend Swarthmore College on a full scholarship, after
@@ -61,11 +61,11 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-6">
         {/* meaning of amadeus */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-xl md:text-2xl font-bold mb-2">
             If there is anything you can do, or dream you can, begin it.
             Boldness has genius, power and magic in it. Begin it now.
           </h2>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             These words inspired by Johann Wolfgang von Goethe, are the
             inspiration behind the university&apos;s name, Ashesi, which means
             &quot;beginning&quot; in Fante (a native Ghanaian language).
@@ -95,10 +95,10 @@ const MissionAndHistory = () => {
       {/* text writeup */}
       <div className="ContentContainer">
         <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
-          <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
+          <h1 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             Our Mission, Vision and History
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi was established as an independent, public benefit education
             institution operating on a not-for-profit basis. The university
             obtained accreditation from the National Accreditation Board (NAB)
