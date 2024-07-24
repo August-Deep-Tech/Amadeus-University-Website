@@ -8,10 +8,10 @@ const TuitionFees = () => {
       {/* text writeup */}
       <div className="ContentContainer">
         <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
-          <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
+          <h1 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             Undergraduate Fees
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi’s academic year consist of two semesters running respectively from late August to December, and January to May.
             The fees listed below are per each semester, and also cover textbooks, internet services, other learning material
             and activity, and support services such as career services, health services, and counselling. For first-year and
@@ -81,7 +81,7 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-6">
         <div className="">
           {/* table */}
-          <table className="w-full border-collapse">
+          <table className="w-full border-collapse text-sm sm:text-base">
             <thead>
               <tr className='text-au-burgundy'>
                 <th className="text-left border-b py-2">Fees</th>
@@ -122,7 +122,7 @@ const toggleBarData: ToggleBarProps[] = [
   {
     title: "Installment Payment Plans",
     content: (
-      <div className="flex flex-col gap-0">
+      <div className="flex flex-col gap-0 text-sm sm:text-base">
         <div>
           <p className="text-xl font-light">
             Ashesi has flexible payment plans for families who cannot pay fees in full at
@@ -144,7 +144,7 @@ const toggleBarData: ToggleBarProps[] = [
   {
     title: "Paying Fees: Bank Deposits",
     content: (
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 text-sm sm:text-base">
         {/* Fees */}
         <div className="">
           <div className="mb-6">

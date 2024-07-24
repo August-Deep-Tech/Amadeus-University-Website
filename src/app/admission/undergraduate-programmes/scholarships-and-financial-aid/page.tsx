@@ -8,10 +8,10 @@ const ScholarshipsandFinancialAid = () => {
       {/* text writeup */}
       <div className="ContentContainer">
         <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
-          <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
+          <h1 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             Partnerships Make an Ashesi Education Affordable
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             The students we educate must, and will, come from a wide variety of backgrounds, with different perspectives
             and lessons to share. That is why together with generous partners, we have taken on a heavy commitment of
             providing scholarships to admitted students who need it, to ensure that an Ashesi education is affordable
