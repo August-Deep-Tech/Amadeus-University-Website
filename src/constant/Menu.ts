@@ -16,7 +16,7 @@ export const menuData = [
         name: "Leadership",
         link: "/about/leadership/trustees",
         submenu: [
-          {name: "Trustees", link: "/about/leadership/trustees"},
+          { name: "Trustees", link: "/about/leadership/trustees" },
           {
             name: "Governing Council",
             link: "/about/leadership/governing-council",
@@ -31,12 +31,12 @@ export const menuData = [
           },
         ],
       },
-      {name: "Recognition", link: "/about/recognition"},
+      { name: "Recognition", link: "/about/recognition" },
       {
         name: "University Policies",
         link: "/about/university-policies",
       },
-      {name: "Reports", link: "/about/reports"},
+      { name: "Reports", link: "/about/reports" },
       // {
       //   name: "Facts and Data",
       //   link: "/about/facts-and-data/quick-facts",
@@ -44,7 +44,7 @@ export const menuData = [
       //     {name: "Quick Facts", link: "/about/facts-and-data/quick-facts"},
       //   ],
       // },
-      {name: "Our Campus", link: "/about/our-campus"},
+      { name: "Our Campus", link: "/about/our-campus" },
       {
         name: "Job Openings",
         link: "https://recruitment.amadeusuniversity.org/",
@@ -53,13 +53,13 @@ export const menuData = [
         name: "Alumni",
         link: "/about/alumni",
         submenu: [
-          {name: "Alumni Relations", link: "/about/alumni/alumni-relations"},
-          {name: "Alumni Council", link: "/about/alumni/alumni-council"},
-          {name: "Alumni Resources", link: "/about/alumni/alumni-resources"},
-          {name: "Make a Gift", link: "/about/alumni/make-a-gift"},
+          { name: "Alumni Relations", link: "/about/alumni/alumni-relations" },
+          { name: "Alumni Council", link: "/about/alumni/alumni-council" },
+          { name: "Alumni Resources", link: "/about/alumni/alumni-resources" },
+          { name: "Make a Gift", link: "/about/alumni/make-a-gift" },
         ],
       },
-      {name: "Contact Us", link: "/about/contact-us"},
+      { name: "Contact Us", link: "/about/contact-us" },
     ],
   },
   {
@@ -74,8 +74,9 @@ export const menuData = [
             name: "Graduate Outcomes",
             link: "/admission/choose-amadeus/graduate-outcomes",
           },
-          { name: "Our Campus & Student Life", 
-            link: "/admission/choose-amadeus/our-campus" 
+          {
+            name: "Our Campus & Student Life",
+            link: "/admission/choose-amadeus/our-campus"
           },
         ],
       },
@@ -87,12 +88,12 @@ export const menuData = [
             name: "Tuition & Fees",
             link: "/admission/undergraduate-programmes/tuition-and-fees",
           },
-          { 
-            name: "Scholarships and Financial Aid", 
+          {
+            name: "Scholarships and Financial Aid",
             link: "/admission/undergraduate-programmes/scholarships-and-financial-aid",
           },
-          { 
-            name: "How to Apply", 
+          {
+            name: "How to Apply",
             link: "/admission/undergraduate-programmes/how-to-apply",
           },
         ],
@@ -240,8 +241,8 @@ export const menuData = [
       //     {name: "Engineering", link: "/academics/programmes/engineering"},
       //   ],
       // },
-      {name: "Learning Goals", link: "/academics/learning-goals"},
-      {name: "Academic Registry", link: "/academics/academic-registry"},
+      { name: "Learning Goals", link: "/academics/learning-goals" },
+      { name: "Academic Registry", link: "/academics/academic-registry" },
       // {name: "Calendar", link: "#"},
       {
         name: "Library",
@@ -253,8 +254,9 @@ export const menuData = [
   // student life nav menu
   {
     name: "Student Life",
-    link: "/student-life",
+    link: "/student-life/overview",
     submenu: [
+      { name: "Overview", link: "/student-life/overview" },
       {
         name: "Student Affairs",
         link: "/student-life/student-affairs",
@@ -265,7 +267,7 @@ export const menuData = [
           },
           {
             name: "Honour Code",
-            link: "/student-life/student-affairs/student-handbook",
+            link: "/student-life/student-affairs/honour-code",
           },
           {
             name: "Clubs and Societies",
@@ -273,26 +275,92 @@ export const menuData = [
           },
         ],
       },
-      {name: "Support", link: "#"},
-      {name: "Custom Development", link: "#"},
+      {
+        name: "Living Here",
+        link: "/student-life/living-here",
+        submenu: [
+          {
+            name: "On-campus Housing",
+            link: "/student-life/living-here/on-campus-housing",
+          },
+          {
+            name: "Off-campus Housing",
+            link: "/student-life/living-here/off-campus-housing",
+          },
+        ],
+      },
+      {
+        name: "Student Services",
+        link: "/student-life/student-services",
+        submenu: [
+          {
+            name: "Coaching, Counseling & Advising",
+            link: "/student-life/student-services/coaching-counseling-advising",
+          },
+          {
+            name: "Diversity & International Programs",
+            link: "/student-life/student-services/diversity-international-programs",
+            submenu: [
+              {
+                name: "International Programs",
+                link: "/student-life/student-services/diversity-international-programs/international-programs",
+              },
+              {
+                name: "Diversity & Inclusion",
+                link: "/student-life/student-services/diversity-international-programs/diversity-inclusion",
+              },
+              {
+                name: "Sexual Misconduct Prevention",
+                link: "/student-life/student-services/diversity-international-programs/sexual-misconduct-prevention",
+              },
+            ],
+          },
+          {
+            name: "Career Services",
+            link: "/student-life/student-services/career-services",
+            submenu: [
+              {
+                name: "For Students",
+                link: "/student-life/student-services/career-services/for-students",
+              },
+              {
+                name: "For Recruiters",
+                link: "/student-life/student-services/career-services/for-recruiters",
+              },
+              {
+                name: "Postgraduate Placement",
+                link: "/student-life/student-services/career-services/postgraduate-placement",
+              },
+              {
+                name: "Recruiting Partners",
+                link: "/student-life/student-services/career-services/recruiting-partners",
+              },
+            ],
+          },
+          {
+            name: "Health and Wellbeing",
+            link: "/student-life/student-services/health-and-wellbeing",
+          },
+        ],
+      },
     ],
   },
   {
     name: "News",
     link: "/news",
     submenu: [
-      {name: "Consulting", link: "#"},
-      {name: "Support", link: "#"},
-      {name: "Custom Development", link: "#"},
+      { name: "Consulting", link: "#" },
+      { name: "Support", link: "#" },
+      { name: "Custom Development", link: "#" },
     ],
   },
   {
     name: "Useful Links",
     link: "/useful-links",
     submenu: [
-      {name: "Consulting", link: "#"},
-      {name: "Support", link: "#"},
-      {name: "Custom Development", link: "#"},
+      { name: "Consulting", link: "#" },
+      { name: "Support", link: "#" },
+      { name: "Custom Development", link: "#" },
     ],
   },
   // { name: 'Job Openings', link: '/job-openings', submenu: [] }
