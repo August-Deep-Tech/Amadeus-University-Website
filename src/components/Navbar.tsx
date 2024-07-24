@@ -204,7 +204,7 @@ const Navbar = () => {
                                                                             handleClick(subItem.link);
                                                                             setCurrentPath(item?.name)
                                                                         }}
-                                                                        className={`block py-4 ${currentItem?.name === subItem?.name
+                                                                        className={`block text-sm py-4 ${currentItem?.name === subItem?.name
                                                                             ? "font-bold text-bold"
                                                                             : ""
                                                                             }`}

@@ -64,7 +64,7 @@ export const menuData = [
   },
   {
     name: "Admission",
-    link: "/admission/choose-amadeus/graduate-outcomes",
+    link: "/admission/choose-amadeus",
     submenu: [
       {
         name: "Choose Amadeus",
@@ -74,7 +74,9 @@ export const menuData = [
             name: "Graduate Outcomes",
             link: "/admission/choose-amadeus/graduate-outcomes",
           },
-          { name: "Our Campus & Student Life", link: "/admission/choose-amadeus/our-campus" },
+          { name: "Our Campus & Student Life", 
+            link: "/admission/choose-amadeus/our-campus" 
+          },
         ],
       },
       {
