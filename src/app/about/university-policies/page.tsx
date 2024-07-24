@@ -10,21 +10,21 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-3">
         {/* responsible office */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Responsible Offices:</span> Academic
             Affairs: Office of Student & Community Affairs
           </p>
         </div>
         {/* purpose */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Purpose:</span> To openly share some of
             the benefits of Ashesi University with the general public
           </p>
         </div>
         {/* writeup */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             Outreach service and access at Ashesi University supports our
             academic mission by bridging scholarly research of faculty and
             students, their entrepreneurship, and service of students with
@@ -36,7 +36,7 @@ const toggleBarData: ToggleBarProps[] = [
             accessible to all, regardless of ethnicity, religion, disability or
             gender.
           </p>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             As a University we carry out a number of community engagement
             activities throughout the academic year under the auspices of our
             different departments. In the context of community engagement, the
@@ -54,7 +54,7 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-3">
         {/* responsible office */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Responsible Offices:</span> Admissions
             and Financial Aid; University Administration Office; Academic
             Affairs Office; Office of Student and Community Affairs
@@ -62,7 +62,7 @@ const toggleBarData: ToggleBarProps[] = [
         </div>
         {/* purpose */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Purpose:</span> To ensure equity for
             eligible women (students, staff, and faculty) to participate and
             succeed in a university of high international standing.
@@ -70,7 +70,7 @@ const toggleBarData: ToggleBarProps[] = [
         </div>
         {/* writeup */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             Students are recruited with gender parity as one of the foci,
             particularly for the STEM programs offered at Ashesi University.
             Mentoring, associations, and clubs are specifically provided to
@@ -92,21 +92,21 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-3">
         {/* responsible office */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Responsible Offices:</span> Academic
             Affairs Office; Office of Student and Community Affairs.
           </p>
         </div>
         {/* purpose */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             <span className="font-bold">Purpose:</span> To achieve equity
             outcomes for members of the Ashesi community
           </p>
         </div>
         {/* writeup */}
         <div>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             Ashesi University strives to provide a safe, inclusive and equitable
             study and work environment. Ashesi fosters fairness and respect for
             diverse groups of people. All members of Ashesi are to support
@@ -117,7 +117,7 @@ const toggleBarData: ToggleBarProps[] = [
             belief, colour, race, ethnic or national origins, disability, age,
             political opinion, employment status, and family status.
           </p>
-          <p className="text-2xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             Ashesi provides faculty, staff and students annual training in
             diversity and inclusion. And the university provides resources as
             part of its plan to monitor fairness and report progress towards
@@ -142,10 +142,10 @@ const UniversityPolicies = () => {
       {/* text writeup */}
       <div className="ContentContainer">
         <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
-          <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
+          <h1 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
             University Policies
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi University is a private, non-profit, non-sectarian
             institution. Ashesi admits students of any race, colour, gender,
             national and ethnic origin to all the rights, privileges, programs,
@@ -155,7 +155,7 @@ const UniversityPolicies = () => {
             Ashesi will work with all interested parties in achieving its
             educational mission.
           </p>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Below are some key university-wide policies. If a policy on a given
             topic is not listed here, or you have any questions, please either
             check with the individual Offices or contact the Office of the

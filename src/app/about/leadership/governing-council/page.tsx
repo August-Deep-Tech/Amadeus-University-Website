@@ -12,7 +12,7 @@ const toggleBarData: ToggleBarProps[] = [
         {/* image and text wrap around */}
         <div className="flex flex-col lg:flex-row">
           <div className="w-full order-2 lg:order-1 ">
-            <p className="text-base sm:text-lg lg:text-2xl xl:text-[24px] leading-relaxed sm:leading-loose lg:leading-[38px] font-light">
+            <p className="text-xl md:text-2xl leading-relaxed sm:leading-loose lg:leading-[38px] font-light">
               Yaw Asare-Aboagye is the Head of Global Clinical Operations at
               Drugs for Neglected Diseases initiative (DNDi), based in Geneva,
               Switzerland. In this position, Yaw is responsible for ensuring
@@ -35,7 +35,7 @@ const toggleBarData: ToggleBarProps[] = [
             </div>
           </div>
         </div>
-        <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+        <p className="text-xl md:text-2xl leading-relaxed sm:leading-loose md:leading-[38px] font-light">
           Yaw has over 30 years of experience in the biotechnology industry and
           has worked for some of the major biotechnology companies in the US
           including Amgen, where he was Director for Planning and Technical
@@ -52,7 +52,7 @@ const toggleBarData: ToggleBarProps[] = [
         {/* image and text wrap around */}
         <div className="flex flex-col lg:flex-row">
           <div className="w-full order-2 lg:order-1 ">
-            <p className="text-base sm:text-lg lg:text-2xl xl:text-[24px] leading-relaxed sm:leading-loose lg:leading-[38px] font-light">
+            <p className="text-xl md:text-2xl leading-relaxed sm:leading-loose lg:leading-[38px] font-light">
               Yaw Asare-Aboagye is the Head of Global Clinical Operations at
               Drugs for Neglected Diseases initiative (DNDi), based in Geneva,
               Switzerland. In this position, Yaw is responsible for ensuring
@@ -75,7 +75,7 @@ const toggleBarData: ToggleBarProps[] = [
             </div>
           </div>
         </div>
-        <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+        <p className="text-xl md:text-2xl leading-relaxed sm:leading-loose md:leading-[38px] font-light">
           Yaw has over 30 years of experience in the biotechnology industry and
           has worked for some of the major biotechnology companies in the US
           including Amgen, where he was Director for Planning and Technical
@@ -93,16 +93,16 @@ const GoverningCouncil = () => {
       {/* text writeup */}
       <div className="ContentContainer">
         <div className="text-au-100-black flex flex-col gap-5 sm:gap-6 md:gap-[30px] py-10 sm:py-16 md:py-[77px]">
-          <h1 className="text-2xl sm:text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px] font-light">
+          <h1 className="text-3xl md:text-[40px]  leading-tight sm:leading-snug md:leading-[52px] font-light">
             Governing Council
           </h1>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi University is led by Founder and President, Patrick G. Awuah,
             Jr, who serves as the Chief Executive Officer and is accountable to
             the Board of Directors. The University&apos;s Board of Directors are
             listed below.
           </p>
-          <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+          <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             The Ashesi University Foundation which supports the
             University&apos;s mission, is also led by an experienced autonomous
             Board of Trustees and Advisory Board composed of global academic and
