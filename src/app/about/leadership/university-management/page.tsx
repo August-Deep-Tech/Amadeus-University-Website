@@ -37,6 +37,7 @@ const UniversityManagement = () => {
 
           {universityProfileCardProps.map((profile, index) => (
             <ProfileCard
+              key={index}
               name={profile.name}
               position={profile.position}
               imageUrl={profile.imageUrl}

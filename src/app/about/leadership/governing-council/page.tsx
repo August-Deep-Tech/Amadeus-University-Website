@@ -99,7 +99,7 @@ const GoverningCouncil = () => {
           <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi University is led by Founder and President, Patrick G. Awuah,
             Jr, who serves as the Chief Executive Officer and is accountable to
-            the Board of Directors. The University's Board of Directors are
+            the Board of Directors. The University&apos;s Board of Directors are
             listed below.
           </p>
           <p className="text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
