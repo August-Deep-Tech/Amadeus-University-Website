@@ -32,13 +32,13 @@ const Overview = () => {
                         title={"Ashesi Is What We Make It"}
                         content={<div>
                             <p className="text-xl font-light pt-[20px]">
-                                "Ashesi has accomplished a lot within a relatively short period of time:
-                                Instituting Africa's first honour code, over 90% career placement 3 months
+                            {'"'}Ashesi has accomplished a lot within a relatively short period of time:
+                                Instituting Africa{"'"}s first honour code, over 90% career placement 3 months
                                 after national service, a diverse student body representing 20+ countries,
                                 a beautiful campus with very strong academic programs, are among the few
                                 that comes to mind. We profess many things but perfection isn{"'"}t one. We
                                 therefore encourage students to help Ashesi continue to seek excellence.
-                                Ashesi will be what you make it!"
+                                Ashesi will be what you make it!{'"'}
                             </p>
                             <p className="text-xl font-light pt-[20px]">
                                 - Abdul Mahdi, Dean of Student & Community Affairs
@@ -56,7 +56,7 @@ const Overview = () => {
                             Living Here
                         </h2>
                         <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
-                            Ashesi's campus was designed as an inspiring base for students all over Africa to learn,
+                            Ashesi{"'"}s campus was designed as an inspiring base for students all over Africa to learn,
                             collaborate, and form friendships. Our campus culture is driven by student initiative, and
                             we are always looking for ways to improve our residential experience for all. Our campus
                             features a lot of spaces for living, dining, recreation and learning.
@@ -94,7 +94,7 @@ const Overview = () => {
                             Living Here
                         </h2>
                         <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
-                            Ashesi's campus was designed as an inspiring base for students all over Africa to learn,
+                            Ashesi{"'"}s campus was designed as an inspiring base for students all over Africa to learn,
                             collaborate, and form friendships. Our campus culture is driven by student initiative, and
                             we are always looking for ways to improve our residential experience for all. Our campus
                             features a lot of spaces for living, dining, recreation and learning.
