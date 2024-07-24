@@ -66,6 +66,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      {/* youtube video banner */}
       <div>
         <YoutubeVideoBanner
           backgroundImage="/assets/home/home-4.jpg"
