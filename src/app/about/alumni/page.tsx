@@ -14,11 +14,11 @@ const Alumni = () => {
             Students yesterday, alumni for a lifetime
           </h1>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-            Your Ashesi journey hardly ends when you graduate from here; it's
-            actually just begun. Our alumni are our biggest champions and the
-            work they continue to do after Ashesi helps extend our impact.
-            Across the world, and particularly on the African continent, our
-            1440 alumni work in a variety of ways to make impact.
+            Your Ashesi journey hardly ends when you graduate from here;
+            it&apos;s actually just begun. Our alumni are our biggest champions
+            and the work they continue to do after Ashesi helps extend our
+            impact. Across the world, and particularly on the African continent,
+            our 1440 alumni work in a variety of ways to make impact.
           </p>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Alumni also continue to receive assistance from Ashesi in terms of

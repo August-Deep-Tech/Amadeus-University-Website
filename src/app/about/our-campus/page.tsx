@@ -33,10 +33,10 @@ const toggleBarData: ToggleBarProps[] = [
 
           {/* caption */}
           <span className="text-sm">
-            Ashesi's campus is about a 40 minute drive away from Accra's airport
-            central district. Photo by Kwasiog [CC BY-SA 4.0
-            (https://creativecommons.org/licenses/by-sa/4.0)], from Wikimedia
-            Commons
+            Ashesi&apos;s campus is about a 40 minute drive away from
+            Accra&apos;s airport central district. Photo by Kwasiog [CC BY-SA
+            4.0 (https://creativecommons.org/licenses/by-sa/4.0)], from
+            Wikimedia Commons
           </span>
         </div>
       </div>
@@ -85,8 +85,8 @@ const toggleBarData: ToggleBarProps[] = [
         <div>
           <p className="text-xl md:text-2xl font-light">
             The Natembea Health Centre is an on-campus facility that caters to
-            the community's health needs. The centre ensures high quality health
-            care service for the entire Ashesi Community through health
+            the community&apos;s health needs. The centre ensures high quality
+            health care service for the entire Ashesi Community through health
             guidance, medical treatment and prevention of disease through health
             education and counseling. Students who experience severe medical
             challenges are transported to an off-campus hospital, about 15
@@ -127,8 +127,8 @@ const OurCampus = () => {
             Designed and Assembled in Ghana
           </h1>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-            Set on 100 acres in Berekuso overlooking Ghana's capital city of
-            Accra, Ashesi's campus combines traditional design, modern
+            Set on 100 acres in Berekuso overlooking Ghana&apos;s capital city
+            of Accra, Ashesi&apos;s campus combines traditional design, modern
             technology and environmental best practices - creating an inspiring
             base for young Africans from diverse backgrounds to live,
             collaborate and study together for generations to come.
