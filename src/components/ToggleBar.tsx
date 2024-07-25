@@ -25,7 +25,7 @@ const ToggleBar: React.FC<ToggleBarProps> = ({title, content}) => {
         className="w-full py-8  flex gap-3 items-center focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-2xl sm:text-3xl md:text-[40px] font-medium ">
+        <span className="text-2xl sm:text-3xl md:text-[40px] font-medium text-nowrap">
           {title}
         </span>
         <span className="text-5xl text-au-burgundy transition-transform duration-300">
