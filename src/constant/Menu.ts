@@ -210,38 +210,9 @@ export const menuData = [
               },
             ],
           },
-          // {name: "Humanities", link: "/academics/programmes/humanities"},
-          // {
-          //   name: "Economic & Business",
-          //   link: "/academics/programmes/economics-and-business",
-          // },
-          // {
-          //   name: "Computer Science",
-          //   link: "/academics/programmes/computer-science",
-          // },
-          // {name: "Engineering", link: "/academics/programmes/engineering"},
         ],
       },
-      // {
-      //   name: "Programmes",
-      //   link: "/academics/programmes",
-      //   submenu: [
-      //     {
-      //       name: "Overview",
-      //       link: "/academics/programmes",
-      //     },
-      //     {name: "Humanities", link: "/academics/programmes/humanities"},
-      //     {
-      //       name: "Economic & Business",
-      //       link: "/academics/programmes/economics-and-business",
-      //     },
-      //     {
-      //       name: "Computer Science",
-      //       link: "/academics/programmes/computer-science",
-      //     },
-      //     {name: "Engineering", link: "/academics/programmes/engineering"},
-      //   ],
-      // },
+
       {name: "Learning Goals", link: "/academics/learning-goals"},
       {name: "Academic Registry", link: "/academics/academic-registry"},
       // {name: "Calendar", link: "#"},
@@ -358,11 +329,7 @@ export const menuData = [
   {
     name: "Useful Links",
     link: "/useful-links",
-    submenu: [
-      {name: "Consulting", link: "#"},
-      {name: "Support", link: "#"},
-      {name: "Custom Development", link: "#"},
-    ],
+    submenu: [],
   },
   // { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];
