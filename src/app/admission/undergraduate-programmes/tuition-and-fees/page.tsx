@@ -81,7 +81,7 @@ const toggleBarData: ToggleBarProps[] = [
       <div className="flex flex-col gap-6">
         <div className="">
           {/* table */}
-          <table className="w-full border-collapse text-sm sm:text-base">
+          <table className="w-full border-collapse text-sm sm:text-xl ">
             <thead>
               <tr className='text-au-burgundy'>
                 <th className="text-left border-b py-2">Fees</th>
@@ -110,7 +110,7 @@ const toggleBarData: ToggleBarProps[] = [
               ))}
             </tbody>
           </table>
-          <p className="text-xl font-light pt-[20px]">
+          <p className="text-xl md:text-2xl font-light pt-[20px]">
             Families are advised to plan for additional expenses around meals
             and other personal items that students may need. Families can also
             opt to put their ward(s) on a university prepaid meal card.
@@ -124,7 +124,7 @@ const toggleBarData: ToggleBarProps[] = [
     content: (
       <div className="flex flex-col gap-0 text-sm sm:text-base">
         <div>
-          <p className="text-xl font-light">
+          <p className="text-xl md:text-2xl font-light">
             Ashesi has flexible payment plans for families who cannot pay fees in full at
             the start of the semester. Families have the option of making payments twice a
             semester or four times a semester, each option incurring different surcharges. Families who pay full tuition fees before the due date for each semester will receive an early payment discount.
@@ -148,13 +148,13 @@ const toggleBarData: ToggleBarProps[] = [
         {/* Fees */}
         <div className="">
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-au-burgundy">(1) Pay fees at the bank (Ghana & ECOWAS Region)</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-au-burgundy">(1) Pay fees at the bank (Ghana & ECOWAS Region)</h2>
             <p>
               For payments within Ghana or the West Africa (ECOWAS) region, students can deposit fees directly to either our Ghana Cedi or US Dollar account with any ECOBANK branch.
             </p>
           </div>
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-au-burgundy">(2) Fill deposit slip</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-au-burgundy">(2) Fill deposit slip</h2>
             <p>Complete a deposit slip in triplicate as follows:</p>
             <ul className="list-disc pl-5">
               <li>Original for the bank</li>
@@ -163,14 +163,14 @@ const toggleBarData: ToggleBarProps[] = [
             </ul>
           </div>
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-au-burgundy">(3) Confirm information required on the deposit slip</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-au-burgundy">(3) Confirm information required on the deposit slip</h2>
             <ul className="list-disc pl-5">
               <li>Full name and contact number(s).</li>
               <li>A valid bank stamp</li>
             </ul>
           </div>
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-au-burgundy">(4) Submit deposit slip to Ashesi, and get an official Ashesi Receipt</h2>
+            <h2 className="text-xl md:text-2xl font-semibold text-au-burgundy">(4) Submit deposit slip to Ashesi, and get an official Ashesi Receipt</h2>
           </div>
         </div>
       </div>
