@@ -64,7 +64,7 @@ const NextArrow = (props: any) => {
   const {onClick} = props;
   return (
     <div
-      className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full cursor-pointer z-10"
+      className="absolute right-8 top-1/2 transform -translate-y-1/2 rounded-full cursor-pointer z-10"
       onClick={onClick}
     >
       <svg
