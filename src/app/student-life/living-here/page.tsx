@@ -15,7 +15,7 @@ const LivingHere = () => {
             Welcome to your new home
           </h1>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-            Ashesi's campus was designed as an inspiring base for students all over Africa to learn, collaborate, and form friendships.
+            Ashesi{"'"}s campus was designed as an inspiring base for students all over Africa to learn, collaborate, and form friendships.
             Our campus culture is driven by student initiative, and we are always looking for ways to improve our residential experience for all. Our campus features a lot of spaces for living, dining, recreation and learning.
           </p>
         </div>

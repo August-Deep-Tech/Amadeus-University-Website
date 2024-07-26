@@ -12,8 +12,8 @@ const Clubs = () => {
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Students at Ashesi are encouraged to drive the creation of a vibrant on-campus culture. Campus life at Ashesi is what
             you make of it. An important aspect of the campus culture is the presence of clubs and societies and activities emanating
-            from these institutions. As Ashesi's first generation of students, they have the unique opportunity to form new student organizations,
-            initiate new activities, and establish traditions. Ashesi's goal is to create an environment that enables students to build a strong community.
+            from these institutions. As Ashesi{"'"}s first generation of students, they have the unique opportunity to form new student organizations,
+            initiate new activities, and establish traditions. Ashesi{"'"}s goal is to create an environment that enables students to build a strong community.
           </p>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Clubs and societies provide avenues for students to develop stronger relationships, test out their ideas, sharpen organizational
@@ -29,7 +29,7 @@ const Clubs = () => {
           </p>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi Pro Solve <br />
-            The aim of this club is to develop students' algorithmic thinking and also bring out the hidden mathematical talents in students.
+            The aim of this club is to develop students{"'"} algorithmic thinking and also bring out the hidden mathematical talents in students.
           </p>
           <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
             Ashesi Model United Nations <br />
