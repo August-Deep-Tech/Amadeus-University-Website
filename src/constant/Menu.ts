@@ -67,7 +67,7 @@ export const menuData = [
     name: "Admission",
     link: "/admission/overview",
     submenu: [
-      { name: "Overview", link: "/admission/overview" },
+      {name: "Overview", link: "/admission/overview"},
       {
         name: "Choose Amadeus",
         link: "/admission/choose-amadeus/graduate-outcomes",
@@ -107,6 +107,7 @@ export const menuData = [
     name: "Academics",
     link: "/academics",
     submenu: [
+      {name: "Overview", link: "/academics"},
       {
         name: "Faculties",
         link: "/academics/faculties",
@@ -213,7 +214,6 @@ export const menuData = [
           },
         ],
       },
-
       {name: "Learning Goals", link: "/academics/learning-goals"},
       {name: "Academic Registry", link: "/academics/academic-registry"},
       // {name: "Calendar", link: "#"},

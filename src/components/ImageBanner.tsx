@@ -17,6 +17,7 @@ const ImageBanner: React.FC<ImageBannerProps> = ({
   return (
     <div className={`relative w-full ${heightClass || defaultHeightClasses}`}>
       <Image
+        quality={100}
         src={src}
         fill
         alt={alt}
