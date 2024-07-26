@@ -47,7 +47,7 @@ const Academics = () => {
               <li className="hover:no-underline"> Computer Engineering</li>
               <li className="hover:no-underline">
                 {" "}
-                Electrical and Electronic Engineerings
+                Electrical and Electronic Engineering
               </li>
             </ul>
           </div>
