@@ -1,9 +1,8 @@
 import React from "react";
 import YoutubeVideoBanner from "@/components/YoutubeVideoBanner";
 import ToggleBar from "@/components/ToggleBar";
-import {ToggleBarProps} from "@/components/ToggleBar";
 
-const toggleBarData: ToggleBarProps[] = [
+const toggleBarData = [
   {
     title: "Our Mission & Vision",
     content: (

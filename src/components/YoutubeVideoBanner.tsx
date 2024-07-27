@@ -1,4 +1,5 @@
 "use client";
+
 import {useState} from "react";
 import Image from "next/image";
 import {FaPlay} from "react-icons/fa";
@@ -15,25 +16,26 @@ interface VideoComponentProps {
   };
 }
 
+const defaultHeights = {
+  default: "h-48",
+  sm: "sm:h-64",
+  md: "md:h-80",
+  lg: "lg:h-96",
+  xl: "xl:h-[34.25rem]",
+};
+
 const YoutubeVideoBanner: React.FC<VideoComponentProps> = ({
   backgroundImage,
   youtubeLink,
-  height = {
-    default: "h-48",
-    sm: "sm:h-64",
-    md: "md:h-80",
-    lg: "lg:h-96",
-    xl: "xl:h-[34.25rem]",
-  },
+  height = {},
 }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const openModal = (): void => setIsModalOpen(true);
   const closeModal = (): void => setIsModalOpen(false);
 
-  const heightClasses = `${height.default} ${height.sm || ""} ${
-    height.md || ""
-  } ${height.lg || ""} ${height.xl || ""}`;
+  const mergedHeights = {...defaultHeights, ...height};
+  const heightClasses = Object.values(mergedHeights).join(" ");
 
   return (
     <div className={`relative w-full ${heightClasses}`}>

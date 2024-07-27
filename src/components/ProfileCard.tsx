@@ -24,13 +24,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <p className="text-lg sm:text-xl text-gray-600 mt-1 pb-2 border-b">
             {position}
           </p>
-          <div className="mt-4 text-base sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-            <div className="float-right ml-4 mb-4">
+          <div className="mt-4 text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
+            <div className="md:float-right ml-4 mb-4">
               <Image
                 src={imageUrl}
                 alt={name}
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 className="rounded-lg object-cover"
               />
             </div>

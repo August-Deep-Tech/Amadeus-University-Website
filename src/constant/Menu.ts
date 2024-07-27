@@ -1,7 +1,7 @@
 export const menuData = [
   {
     name: "About",
-    link: "/about",
+    link: "/about/vision-mission-and-history",
     submenu: [
       // {name: "Overview", link: "/about"},
       {
@@ -16,7 +16,7 @@ export const menuData = [
         name: "Leadership",
         link: "/about/leadership/trustees",
         submenu: [
-          { name: "Trustees", link: "/about/leadership/trustees" },
+          {name: "Trustees", link: "/about/leadership/trustees"},
           {
             name: "Governing Council",
             link: "/about/leadership/governing-council",
@@ -31,12 +31,12 @@ export const menuData = [
           },
         ],
       },
-      { name: "Recognition", link: "/about/recognition" },
+      {name: "Recognition", link: "/about/recognition"},
       {
         name: "University Policies",
         link: "/about/university-policies",
       },
-      { name: "Reports", link: "/about/reports" },
+      {name: "Reports", link: "/about/reports"},
       // {
       //   name: "Facts and Data",
       //   link: "/about/facts-and-data/quick-facts",
@@ -44,7 +44,7 @@ export const menuData = [
       //     {name: "Quick Facts", link: "/about/facts-and-data/quick-facts"},
       //   ],
       // },
-      { name: "Our Campus", link: "/about/our-campus" },
+      {name: "Our Campus", link: "/about/our-campus"},
       {
         name: "Job Openings",
         link: "https://recruitment.amadeusuniversity.org/",
@@ -53,20 +53,21 @@ export const menuData = [
         name: "Alumni",
         link: "/about/alumni",
         submenu: [
-          { name: "Alumni Relations", link: "/about/alumni/alumni-relations" },
-          { name: "Alumni Council", link: "/about/alumni/alumni-council" },
-          { name: "Alumni Resources", link: "/about/alumni/alumni-resources" },
-          { name: "Make a Gift", link: "/about/alumni/make-a-gift" },
+          {name: "Overview", link: "/about/alumni"},
+          {name: "Alumni Relations", link: "/about/alumni/alumni-relations"},
+          {name: "Alumni Council", link: "/about/alumni/alumni-council"},
+          {name: "Alumni Resources", link: "/about/alumni/alumni-resources"},
+          {name: "Make a Gift", link: "/about/alumni/make-a-gift"},
         ],
       },
-      { name: "Contact Us", link: "/about/contact-us" },
+      {name: "Contact Us", link: "/about/contact-us"},
     ],
   },
   {
     name: "Admission",
     link: "/admission/overview",
     submenu: [
-      { name: "Overview", link: "/admission/overview" },
+      {name: "Overview", link: "/admission/overview"},
       {
         name: "Choose Amadeus",
         link: "/admission/choose-amadeus/graduate-outcomes",
@@ -77,7 +78,7 @@ export const menuData = [
           },
           {
             name: "Our Campus & Student Life",
-            link: "/admission/choose-amadeus/our-campus"
+            link: "/admission/choose-amadeus/our-campus",
           },
         ],
       },
@@ -106,6 +107,7 @@ export const menuData = [
     name: "Academics",
     link: "/academics",
     submenu: [
+      {name: "Overview", link: "/academics"},
       {
         name: "Faculties",
         link: "/academics/faculties",
@@ -210,40 +212,10 @@ export const menuData = [
               },
             ],
           },
-          // {name: "Humanities", link: "/academics/programmes/humanities"},
-          // {
-          //   name: "Economic & Business",
-          //   link: "/academics/programmes/economics-and-business",
-          // },
-          // {
-          //   name: "Computer Science",
-          //   link: "/academics/programmes/computer-science",
-          // },
-          // {name: "Engineering", link: "/academics/programmes/engineering"},
         ],
       },
-      // {
-      //   name: "Programmes",
-      //   link: "/academics/programmes",
-      //   submenu: [
-      //     {
-      //       name: "Overview",
-      //       link: "/academics/programmes",
-      //     },
-      //     {name: "Humanities", link: "/academics/programmes/humanities"},
-      //     {
-      //       name: "Economic & Business",
-      //       link: "/academics/programmes/economics-and-business",
-      //     },
-      //     {
-      //       name: "Computer Science",
-      //       link: "/academics/programmes/computer-science",
-      //     },
-      //     {name: "Engineering", link: "/academics/programmes/engineering"},
-      //   ],
-      // },
-      { name: "Learning Goals", link: "/academics/learning-goals" },
-      { name: "Academic Registry", link: "/academics/academic-registry" },
+      {name: "Learning Goals", link: "/academics/learning-goals"},
+      {name: "Academic Registry", link: "/academics/academic-registry"},
       // {name: "Calendar", link: "#"},
       {
         name: "Library",
@@ -257,7 +229,7 @@ export const menuData = [
     name: "Student Life",
     link: "/student-life/overview",
     submenu: [
-      { name: "Overview", link: "/student-life/overview" },
+      {name: "Overview", link: "/student-life/overview"},
       {
         name: "Student Affairs",
         link: "/student-life/student-affairs",
@@ -350,19 +322,15 @@ export const menuData = [
     name: "News",
     link: "/news",
     submenu: [
-      { name: "Consulting", link: "#" },
-      { name: "Support", link: "#" },
-      { name: "Custom Development", link: "#" },
+      {name: "Consulting", link: "#"},
+      {name: "Support", link: "#"},
+      {name: "Custom Development", link: "#"},
     ],
   },
   {
     name: "Useful Links",
     link: "/useful-links",
-    submenu: [
-      { name: "Consulting", link: "#" },
-      { name: "Support", link: "#" },
-      { name: "Custom Development", link: "#" },
-    ],
+    submenu: [],
   },
   // { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];

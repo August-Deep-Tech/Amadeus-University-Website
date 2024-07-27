@@ -1,6 +1,7 @@
 import React from "react";
 import ImageBanner from "@/components/ImageBanner";
 import Image from "next/image";
+import ImageWithParallelText from "@/components/ImageWithParallelText";
 
 const Academics = () => {
   return (
@@ -23,134 +24,83 @@ const Academics = () => {
           </p>
         </div>
       </div>
+
       {/* programmes */}
-      <div className="flex flex-col md:flex-row bg-au-white">
-        {/* writeup */}
-        <div className="w-full md:w-1/2 order-2 md:order-1">
-          <div className="px-6 md:px-10 lg:px-20 py-10 md:py-20 flex flex-col gap-6 md:gap-8 md:max-w-[80%] lg:max-w-[80%] xl:max-w-[70%] md:ml-auto md:mr-[10%] lg:mr-[12%] xl:mr-[15%]">
-            <h2 className="text-3xl md:text-4xl lg:text-[40px] leading-tight">
+      <ImageWithParallelText
+        imageSrc="/assets/about/overview/overview-3.jpg"
+        content={
+          <div>
+            {" "}
+            <h2 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px]">
               Programmes
             </h2>
-
-            {/*programme links list */}
-            <ul className="text-base md:text-lg lg:text-xl leading-relaxed font-light">
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Business Administration
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Economics
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Computer Science
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
+            <ul className="text-au-burgundy text-xl md:text-2xl font-light *:underline *:cursor-pointer">
+              <li className="hover:no-underline">Business Administration</li>
+              <li className="hover:no-underline">Economics </li>
+              <li className="hover:no-underline">Computer Science</li>
+              <li className="hover:no-underline">
+                {" "}
                 Management Information Systems
               </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer">
-                Mechatronics Engineering
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Mechanical Engineering
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Computer Engineering
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Electrical and Electronic Engineerings
+              <li className="hover:no-underline"> Mechatronics Engineering</li>
+              <li className="hover:no-underline"> Mechanical Engineering</li>
+              <li className="hover:no-underline"> Computer Engineering</li>
+              <li className="hover:no-underline">
+                {" "}
+                Electrical and Electronic Engineering
               </li>
             </ul>
           </div>
-        </div>
-        {/* image */}
-        <div className="w-full md:w-1/2 h-[30rem] md:h-auto order-1 md:order-2">
-          <div className="relative h-full w-full">
-            <Image
-              src="/assets/about/overview/overview-3.jpg"
-              fill
-              alt="About Image preview"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
+        }
+        imageOnLeft={false}
+      />
+
       {/* academic resorces */}
-      <div className="flex flex-col md:flex-row bg-au-white">
-        {/* writeup */}
-        <div className="w-full md:w-1/2 order-2 ">
-          <div className="px-6 md:px-10 lg:px-20 py-10 md:py-20 flex flex-col gap-6 md:gap-8 md:max-w-[80%] lg:max-w-[80%] xl:max-w-[70%] md:ml-auto md:mr-[10%] lg:mr-[12%] xl:mr-[15%]">
-            <h2 className="text-3xl md:text-4xl lg:text-[40px] leading-tight">
+      <ImageWithParallelText
+        imageSrc="/assets/about/overview/overview-3.jpg"
+        content={
+          <div>
+            <h2 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px]">
               Academic Resources
             </h2>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
+            <p className="text-xl md:text-2xl font-light mb-2">
               Our academic affairs team supports teaching and learning
               excellence, service and innovation, and curriculum design.
             </p>
-            {/* links list */}
-            <ul className="text-base md:text-lg lg:text-xl leading-relaxed font-light">
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
+            <ul className="text-au-burgundy text-xl md:text-2xl font-light *:underline *:cursor-pointer">
+              <li className="hover:no-underline">
                 Course Catalogue & Curriculum
               </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Academic Registry
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Academic Calendars
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                University Policies
-              </li>
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer">
-                Todd & Ruth Warren Library
-              </li>
+              <li className="hover:no-underline">Academic Registry</li>
+              <li className="hover:no-underline">Academic Calendars</li>
+              <li className="hover:no-underline">University Policies</li>
+              <li className="hover:no-underline">Library</li>
             </ul>
           </div>
-        </div>
-        {/* image */}
-        <div className="w-full md:w-1/2 h-[30rem] md:h-auto order-1 ">
-          <div className="relative h-full w-full">
-            <Image
-              src="/assets/about/overview/overview-3.jpg"
-              fill
-              alt="About Image preview"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
+        }
+      />
+
       {/* quality assurance */}
-      <div className="flex flex-col md:flex-row bg-au-white">
-        {/* writeup */}
-        <div className="w-full md:w-1/2 order-2 md:order-1">
-          <div className="px-6 md:px-10 lg:px-20 py-10 md:py-20 flex flex-col gap-6 md:gap-8 md:max-w-[80%] lg:max-w-[80%] xl:max-w-[70%] md:ml-auto md:mr-[10%] lg:mr-[12%] xl:mr-[15%]">
-            <h2 className="text-3xl md:text-4xl lg:text-[40px] leading-tight">
+      <ImageWithParallelText
+        imageSrc="/assets/about/overview/overview-3.jpg"
+        content={
+          <div>
+            <h2 className="text-3xl md:text-[40px] leading-tight sm:leading-snug md:leading-[52px]">
               Quality Assurance
             </h2>
-            <p className="text-lg md:text-xl lg:text-2xl leading-relaxed font-light">
+            <p className="text-xl md:text-2xl font-light mb-2">
               Our Quality Assurance Committee ensures that the university
               maintains strong teaching and learning standards. It also approves
               curriculum, leads accreditation processes, and among others, has
               advisory responsibility for academic facilities on campus.
             </p>
-            {/* links list */}
-            <ul className="text-base md:text-lg lg:text-xl leading-relaxed font-light">
-              <li className="text-au-dark-grey hover:text-au-light-purple cursor-pointer mb-2">
-                Read our Manual
-              </li>
+            <ul className="text-au-burgundy text-xl md:text-2xl font-light *:underline *:cursor-pointer">
+              <li className="hover:no-underline">Read our Manual</li>
             </ul>
           </div>
-        </div>
-        {/* image */}
-        <div className="w-full md:w-1/2 h-[30rem] md:h-auto order-1 md:order-2">
-          <div className="relative h-full w-full">
-            <Image
-              src="/assets/about/overview/overview-3.jpg"
-              fill
-              alt="About Image preview"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
+        }
+        imageOnLeft={false}
+      />
     </div>
   );
 };
