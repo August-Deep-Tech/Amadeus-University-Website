@@ -156,6 +156,11 @@ const Navbar = () => {
                         </Link>
 
                         <ul
+                         onMouseLeave={() => {
+                            if (prevItem?.link && prevItem.link.length > 0) {
+                                handleClick(prevItem.link);
+                            }
+                        }}
                             className={`${isHome ? "text-au-white" : "text-au-100-black"
                                 } flex justify-between gap-0`}
                         >
