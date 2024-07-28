@@ -10,9 +10,9 @@ const Description = () => {
                         Core Course Descriptions
                     </h1>
                     <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-                        Ashesi's core curriculum consists of an interdisciplinary liberal arts program that includes courses in the
+                        Ashesi{"'"}s core curriculum consists of an interdisciplinary liberal arts program that includes courses in the
                         humanities and social sciences, as well as mathematics and preparatory business and computer science courses.
-                        The core curriculum is supplemented by a set of courses in African Studies, which help develop students' understanding of Africa's past, present and possible future trajectory.
+                        The core curriculum is supplemented by a set of courses in African Studies, which help develop students{"'"} understanding of Africa{"'"}s past, present and possible future trajectory.
                     </p>
                 </div>
             </div>

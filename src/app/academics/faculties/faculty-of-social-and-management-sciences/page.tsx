@@ -11,7 +11,7 @@ const Overview = () => {
                         Humanities and Social Sciences
                     </h1>
                     <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
-                        Ashesi's core curriculum consists of interdisciplinary courses designed and taught by the Humanities and Social Sciences department.
+                        Ashesi{"'"}s core curriculum consists of interdisciplinary courses designed and taught by the Humanities and Social Sciences department.
                         It is always evolving, but typically includes courses in the areas of leadership and communication, technology, entrepreneurship and
                         problem solving, history and philosophy. At Ashesi, interdisciplinary learning extends beyond the classroom through service learning,
                         which gives students an opportunity to solve problem in communities across Ghana and Africa, and in so doing, build the empathy and

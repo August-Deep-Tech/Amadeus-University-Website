@@ -14,7 +14,10 @@ const DiversityInclusion = () => {
             </h1>
             <p className="text-xl sm:text-lg md:text-[24px] leading-relaxed sm:leading-loose md:leading-[38px] font-light">
               Ashesi is committed to creating a campus ethos that celebrates our rich diversity.
-              To foster a welcoming campus environment that enhances learning, the ODIP helps to drive the campus agenda of promoting the awareness of, and the respect for diversity. This is achieved through various intentional cross-cultural programs and initiatives to aid in navigating challenges and exploring opportunities related to diversity and inclusion.
+              To foster a welcoming campus environment that enhances learning, the ODIP helps to 
+              drive the campus agenda of promoting the awareness of, and the respect for diversity. 
+              This is achieved through various intentional cross-cultural programs and initiatives 
+              to aid in navigating challenges and exploring opportunities related to diversity and inclusion.
             </p>
           </div>
         </div>
@@ -70,17 +73,17 @@ const toggleBarData: ToggleBarProps[] = [
     ),
   },
   {
-    title: "Campus Climate Monitoring & Assessment",
+    title: "Campus Climate Monitoring and Assessment",
     content: (
       <div className="text-xl md:text-2xl font-light">
-        The ODIP administers a bi-annual Campus Climate Survey on Diversity and Inclusion to understand students'
+        The ODIP administers a bi-annual Campus Climate Survey on Diversity and Inclusion to understand students{"'"}
         sense of belonging at Ashesi. Results from this survey help to identify how well Ashesi is meeting its diversity
         and inclusion goals and serve as a guide to determining which inclusive policies to adopt.
       </div>
     ),
   },
   {
-    title: "Sensitivity Training & Workshops",
+    title: "Sensitivity Training and Workshops",
     content: (
       <div className="text-xl md:text-2xl font-light">
         These workshops and training modules are designed to help all members of the community to identify
