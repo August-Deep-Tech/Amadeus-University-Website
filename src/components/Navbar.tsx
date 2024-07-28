@@ -13,6 +13,7 @@ const Navbar = () => {
     const isHome = pathname === "/";
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [currentPath, setCurrentPath] = useState("");
+    const [currentTab, setCurrentTab] = useState("");
     const [currentItem, setCurrentItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
     const [prevItem, setPrevItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
 
@@ -100,6 +101,32 @@ const Navbar = () => {
         return null;
     };
 
+    const findHighestLevelByLink = (data: any[], link: string): any | null => {
+        let topMostItem: any | null = null;
+    
+        const search = (items: any[], currentTopMostItem: any | null) => {
+            for (const item of items) {
+                if (item.link === link) {
+                    if (!topMostItem) {
+                        topMostItem = currentTopMostItem || item;
+                    }
+                    return true;
+                }
+    
+                if (item.submenu && item.submenu.length > 0) {
+                    const found = search(item.submenu, currentTopMostItem || item);
+                    if (found) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+    
+        search(data, null);
+        return topMostItem;
+    }
+       
     const handleClick = (link: string) => {
         const item = findMenuItemByLink(menuData, link);
         if (item?.submenu !== null) {
@@ -110,8 +137,9 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        console.log(currentPath);
-    }, [currentItem, currentPath]);
+        const items = findHighestLevelByLink(menuData, pathname)
+        setCurrentTab(items?.name)
+    }, [pathname]);
 
     return (
         <>
@@ -173,7 +201,7 @@ const Navbar = () => {
                                             handleClick(item.link);
                                         }}
                                         className={`${isHome ? "text-au-white" : "text-au-true-black"
-                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentItem?.name && "border-b-4"
+                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentTab && "border-b-4"
                                             }  ${pathname.startsWith(item.link) ? "border-b-4" : ""
                                             } border-au-burgundy`}
                                     >
