@@ -216,12 +216,10 @@ export const menuData = [
       },
       {name: "Learning Goals", link: "/academics/learning-goals"},
       {name: "Academic Registry", link: "/academics/academic-registry"},
-      // {name: "Calendar", link: "#"},
       {
         name: "Library",
         link: "https://library.amadeusuniversity.org/#/app/landing",
       },
-      // {name: "Academic Affairs", link: "#"},
     ],
   },
   // student life nav menu
@@ -330,7 +328,9 @@ export const menuData = [
   {
     name: "Useful Links",
     link: "/useful-links",
-    submenu: [],
+    submenu: [
+      {name: "All Resources", link: "/useful-links"},
+    ],
   },
   // { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];

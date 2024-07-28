@@ -2,18 +2,20 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { menuData } from "@/constant/Menu";
 import { Menu } from "lucide-react";
 import MobileNav from "./MobileNav";
-import { it } from "node:test";
 
 const Navbar = () => {
     const pathname = usePathname();
     const isHome = pathname === "/";
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [currentPath, setCurrentPath] = useState("");
+    const [currentTab, setCurrentTab] = useState("");
+    const [currentItem, setCurrentItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
+    const [prevItem, setPrevItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -30,15 +32,16 @@ const Navbar = () => {
     useEffect(() => {
         const handlePathCheck = () => {
             const normalizedSearchString = normalizeString(currentPath);
-
             const containsSearchString = pathname
                 .toLowerCase()
                 .split('/')
                 .some(segment => normalizeString(segment) === normalizedSearchString);
-                console.log(containsSearchString)
-                console.log(normalizedSearchString)
             if (containsSearchString) {
-                console.log(`The path contains the normalized search string: "${normalizedSearchString}"`);
+                const currentRouteOnRefresh = typeof localStorage !== 'undefined' ? localStorage.getItem("currentRoute") : null;
+                const a = currentRouteOnRefresh ? JSON.parse(currentRouteOnRefresh) : [];
+                setCurrentItem(a);
+                setPrevItem(a);
+                setCurrentPath(a.submenu[0].name)
             }
         };
         window.addEventListener('popstate', handlePathCheck);
@@ -50,7 +53,6 @@ const Navbar = () => {
         };
     }, [pathname, currentPath]);
 
-
     useEffect(() => {
         const item = findMenuItemByLink(menuData, pathname);
         if (!item?.submenu) {
@@ -58,23 +60,23 @@ const Navbar = () => {
             const parentItem = findMenuItemByLink(menuData, highestLevelItem?.link || '');
             if (parentItem?.submenu) {
                 setCurrentItem(parentItem);
-                setprevItem(parentItem);
+                setPrevItem(parentItem);
             }
         } else {
             if (item) {
                 setCurrentItem(item);
-                setprevItem(item);
+                setPrevItem(item);
             }
         }
     }, [pathname]);
 
-    const findMenuItemByLink = (data: any[], link: string): any | null => {
+    const findMenuItemByLink = (data: any, link: string) => {
         for (const item of data) {
             if (item?.link === link) {
                 return { name: item.name, link: item.link, submenu: item.submenu || null };
             }
             if (item.submenu) {
-                const foundInSubmenu = findMenuItemByLink(item.submenu, link);
+                const foundInSubmenu: any = findMenuItemByLink(item.submenu, link);
                 if (foundInSubmenu) {
                     return foundInSubmenu;
                 }
@@ -83,14 +85,14 @@ const Navbar = () => {
         return null;
     };
 
-    const findHighestLevelNameByLink = (data: any[], link: string, parent: any = null): any | null => {
+    const findHighestLevelNameByLink = (data: any, link: string, parent = null) => {
         for (const item of data) {
             if (item.link === link) {
                 return parent ? parent : item;
             }
-            
+
             if (item.submenu) {
-                const found = findHighestLevelNameByLink(item.submenu, link, item);
+                const found: any = findHighestLevelNameByLink(item.submenu, link, item);
                 if (found) {
                     return found;
                 }
@@ -99,22 +101,45 @@ const Navbar = () => {
         return null;
     };
 
-
-    const [currentItem, setCurrentItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
-    const [prevItem, setprevItem] = useState<{ name: string; link: string; submenu?: any[] } | null>(null);
-
+    const findHighestLevelByLink = (data: any[], link: string): any | null => {
+        let topMostItem: any | null = null;
+    
+        const search = (items: any[], currentTopMostItem: any | null) => {
+            for (const item of items) {
+                if (item.link === link) {
+                    if (!topMostItem) {
+                        topMostItem = currentTopMostItem || item;
+                    }
+                    return true;
+                }
+    
+                if (item.submenu && item.submenu.length > 0) {
+                    const found = search(item.submenu, currentTopMostItem || item);
+                    if (found) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+    
+        search(data, null);
+        return topMostItem;
+    }
+       
     const handleClick = (link: string) => {
         const item = findMenuItemByLink(menuData, link);
-        console.log(item)
         if (item?.submenu !== null) {
             setCurrentItem(item);
+            localStorage.setItem("currentRoute", JSON.stringify(item));
+            setCurrentPath(item.submenu[0].name)
         }
     };
 
     useEffect(() => {
-        // console.log(currentItem)
-        // console.log(currentPath)
-    }, [currentItem, currentPath]);
+        const items = findHighestLevelByLink(menuData, pathname)
+        setCurrentTab(items?.name)
+    }, [pathname]);
 
     return (
         <>
@@ -156,6 +181,11 @@ const Navbar = () => {
                         </Link>
 
                         <ul
+                            onMouseLeave={() => {
+                                if (prevItem?.link && prevItem?.link.length > 0) {
+                                    handleClick(prevItem.link);
+                                }
+                            }}
                             className={`${isHome ? "text-au-white" : "text-au-100-black"
                                 } flex justify-between gap-0`}
                         >
@@ -165,22 +195,19 @@ const Navbar = () => {
                                         href={item.link}
                                         onClick={() => {
                                             handleClick(item.link);
-                                            setCurrentPath(item.name)
+                                            setCurrentPath(item.name);
                                         }}
                                         onMouseEnter={() => {
                                             handleClick(item.link);
                                         }}
-                                        onMouseLeave={() => {
-
-                                        }}
                                         className={`${isHome ? "text-au-white" : "text-au-true-black"
-                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentItem?.name && "border-b-4"
+                                            } py-[40px] -translate-y-1 px-4 mx-2 hover:transition-all hover:ease-in-out delay-150 hover:border-b-4 group-hover:border-au-burgundy ${!isHome && item.name === currentTab && "border-b-4"
                                             }  ${pathname.startsWith(item.link) ? "border-b-4" : ""
                                             } border-au-burgundy`}
                                     >
                                         {item?.name}
                                     </Link>
-                                    {item?.submenu.length > 0 && (
+                                    {(item?.submenu && item?.submenu?.length > 0) && (
                                         <div>
                                             <div
                                                 onMouseLeave={() => {
@@ -202,10 +229,10 @@ const Navbar = () => {
                                                                         href={subItem?.link}
                                                                         onClick={() => {
                                                                             handleClick(subItem.link);
-                                                                            setCurrentPath(item?.name)
+                                                                            setCurrentPath(subItem?.name);
                                                                         }}
-                                                                        className={`block text-sm py-4 ${currentItem?.name === subItem?.name
-                                                                            ? "font-bold text-bold"
+                                                                        className={`block text-sm py-4 ${currentPath === subItem?.name
+                                                                            ? "group-hover:font-norma hover:font-extrabol font-extrabol scale-[1.05]"
                                                                             : ""
                                                                             }`}
                                                                     >

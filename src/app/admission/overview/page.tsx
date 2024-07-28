@@ -76,7 +76,7 @@ const toggleBarData: ToggleBarProps[] = [
           <span className='font-semibold'>We Care About Your Character - A Lot!</span> <br />
           A lot of students who apply to Ashesi qualify to be admitted; this means that the application process is very competitive. In order for an application to stand out, prospective students must place an emphasis on sharing information with us that highlights their character and personality. Did you actively play any sport in high school? Were you a member of the debate club? Did you do some work when you were not in school? Applicants must share as much of these experiences with us as possible. Unlike other universities, applicants will find that academic ability is not the only factor considered in admitting a student. You must therefore make it a point to let us know who you are, outside of the classroom.
         </p>
-        <p className="text-xl md:text-2xl font-light pt-[20px]">
+        <div className="text-xl md:text-2xl font-light pt-[20px]">
           <span className='font-semibold'>Other Key Characteristics We Consider</span><br />
           <ul className="list-disc pl-5">
             <li>Student ambition, and an openness to engage the unfamiliar.</li>
@@ -84,14 +84,14 @@ const toggleBarData: ToggleBarProps[] = [
             <li>Desire to help others and contribute to solving problems.</li>
             <li>Willingness to engage opportunities and help create them.</li>
           </ul>
-        </p>
+        </div>
       </div>
     ),
   },
   {
     title: "Deadlines",
     content: (
-      <div className="flex flex-col gap-0 text-sm sm:text-base pb-[20px]">
+      <div className="flex flex-col gadiv-0 text-sm sm:text-base pb-[20px]">
         <div>
           <ul className="list-disc pl-5 text-xl md:text-2xl font-light">
             <li><span className='font-semibold mr-2'>Early:</span>April 27th, 2024</li>
