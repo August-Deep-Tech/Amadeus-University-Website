@@ -17,7 +17,7 @@ const PostgraduatePlacement = () => {
             institutions across the world. Here are some of the places they have studied.
           </p>
           <div className='flex flex-col gap-[50px]'>
-            <p className="text-xl md:text-2xl font-light">
+            <div className="text-xl md:text-2xl font-light">
               <strong>Africa</strong>
               <ul className='list-disc pl-5 text-xl md:text-2xl font-light'>
                 <li>Ghana Institutes of Management and Public Administration</li>
@@ -25,19 +25,19 @@ const PostgraduatePlacement = () => {
                 <li>International Academy of Health and Skin Care - South Africa</li>
                 <li>University of Ghana Business School</li>
               </ul>
-            </p>
-            <p className="text-xl md:text-2xl font-light">
+            </div>
+            <div className="text-xl md:text-2xl font-light">
               <strong>Americas</strong>
               <ul className='list-disc pl-5 text-xl md:text-2xl font-light'>
                 <li>Ghana Institutes of Management and Public Administration</li>
               </ul>
-            </p>
-            <p className="text-xl md:text-2xl font-light">
+            </div>
+            <div className="text-xl md:text-2xl font-light">
               <strong>Europe</strong>
               <ul className='list-disc pl-5 text-xl md:text-2xl font-light'>
                 <li>Ghana Institutes of Management and Public Administration</li>
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       </div>
