@@ -13,7 +13,7 @@ const ImageWithParallelText = ({
   imageOnLeft = true,
 }: ImageWithParallelTextProps) => {
   const imageComponent = (
-    <div className="md:w-1/2">
+    <div className="xl:w-1/2">
       <Image
         src={imageSrc}
         alt="Section Image"
@@ -25,12 +25,12 @@ const ImageWithParallelText = ({
   );
 
   const contentComponent = (
-    <div className="md:w-1/2 py-10 md:p-28 px-6">{content}</div>
+    <div className="xl:w-1/2 py-10 md:p-28 px-6">{content}</div>
   );
 
   return (
     <div
-      className={`flex flex-col md:flex-row bg-gray-100 ${
+      className={`flex flex-col xl:flex-row bg-gray-100 ${
         imageOnLeft ? "flex-col-reverse" : ""
       }`}
     >
