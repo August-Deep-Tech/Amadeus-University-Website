@@ -328,9 +328,7 @@ export const menuData = [
   {
     name: "Useful Links",
     link: "/useful-links",
-    submenu: [
-      {name: "All Resources", link: "/useful-links"},
-    ],
+    submenu: [{name: "All Resources", link: "/useful-links"}],
   },
   // { name: 'Job Openings', link: '/job-openings', submenu: [] }
 ];
