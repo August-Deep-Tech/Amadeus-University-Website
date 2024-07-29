@@ -27,7 +27,7 @@ html {
     ),
     url(/assets/home/home-1.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: 70% 50%;
   height: 100vh;
 }
 @keyframes slideIn {
