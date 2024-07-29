@@ -1,24 +1,26 @@
-import Link from 'next/link';
-import { Key } from 'react';
-import Image from 'next/image';
+import Link from "next/link";
+import {Key} from "react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className='bg-au-burgundy  text-au-white py-[42px]'>
-      <div className='2xl:w-[1440px] 2xl:mx-auto py-2.5 px-5 2xl:px-0'>
+    <footer className="bg-au-burgundy  text-au-white py-[42px]">
+      <div className="2xl:w-[1440px] 2xl:mx-auto py-2.5 px-5 2xl:px-0">
         {/* Quick Links */}
         <div>
-          <h1 className='text-4xl py-[30px]'>Ouick Links</h1>
-          <div className='footer-text'>
-            <div className={` grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] lg:gap-0`}>
+          <h1 className="text-4xl py-[30px]">Ouick Links</h1>
+          <div className="footer-text">
+            <div
+              className={` grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] lg:gap-0`}
+            >
               {[
                 {
                   categoryName: "University",
                   children: [
-                    { text: "Webmail", linkTo: "#" },
-                    { text: "Student Information", linkTo: "#" },
-                    { text: "Academic Calender", linkTo: "#" },
-                    { text: "Institutional Repository", linkTo: "#" },
+                    {text: "Webmail", linkTo: "#"},
+                    {text: "Student Information", linkTo: "#"},
+                    {text: "Academic Calender", linkTo: "#"},
+                    {text: "Institutional Repository", linkTo: "#"},
                   ],
                 },
                 {
@@ -82,62 +84,62 @@ const Footer = () => {
                     }
                   >
                     <ul className="space-y-3">
-                      <div
-                        className={` font-heading text-[24px]`}
-                      >
+                      <div className={` font-heading text-[24px]`}>
                         {e.categoryName}
                       </div>
-                      <div className='space-y-1'>
-                        {e.children.map((item: any, idx: Key | null | undefined) => {
-                          return (
-                            <li
-                              key={idx}
-                              className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
-                            >
-                              {item.isLink ? (
-                                !item?.ext ? (
-                                  <Link
-                                    href={item?.linkTo}
-                                    className="hover:underline text-redish-20"
-                                  >
-                                    <p>{item.text}</p>
-                                  </Link>
+                      <div className="space-y-1">
+                        {e.children.map(
+                          (item: any, idx: Key | null | undefined) => {
+                            return (
+                              <li
+                                key={idx}
+                                className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
+                              >
+                                {item.isLink ? (
+                                  !item?.ext ? (
+                                    <Link
+                                      href={item?.linkTo}
+                                      className="hover:underline text-redish-20"
+                                    >
+                                      <p>{item.text}</p>
+                                    </Link>
+                                  ) : (
+                                    <Link
+                                      href={item.linkTo ?? "#"}
+                                      target="_blank"
+                                      className="hover:underline text-redish-20"
+                                      passHref
+                                    >
+                                      <p>{item.text}</p>
+                                    </Link>
+                                  )
                                 ) : (
-                                  <Link
-                                    href={item.linkTo ?? "#"}
-                                    target="_blank"
-                                    className="hover:underline text-redish-20"
-                                    passHref
-                                  >
-                                    <p>{item.text}</p>
-                                  </Link>
-                                )
-                              ) : (
-                                <div>
-                                  <h1 className="text-greyish-10 pb-[4px]">
-                                    {item.text}
-                                  </h1>
-                                  <p>{item.textTwo}</p>
-                                </div>
-                              )}
-                            </li>
-                          );
-                        })}
+                                  <div>
+                                    <h1 className="text-greyish-10 pb-[4px]">
+                                      {item.text}
+                                    </h1>
+                                    <p>{item.textTwo}</p>
+                                  </div>
+                                )}
+                              </li>
+                            );
+                          }
+                        )}
                       </div>
                     </ul>
                   </section>
                 );
               })}
             </div>
-
           </div>
-
         </div>
         {/* Contact Us */}
-        <div className='pt-[50px] lg:pt-0'>
-          <h1 className='text-4xl py-[30px]'>Contact Us</h1>
-          <div className='footer-text'>
-            <div className={` grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] lg:gap-0`}>
+        <div className="pt-[50px] lg:pt-0">
+          <h1 className="text-4xl py-[30px]">Contact Us</h1>
+          <div className="footer-text">
+            <div
+              className={` grid grid-cols-2 lg:grid-cols-4 gap-y-[30px] lg:gap-0`}
+            >
               {[
                 {
                   categoryName: "Street Address",
@@ -146,7 +148,7 @@ const Footer = () => {
                       text: "1 University Avenue,",
                       textTwo: " Berekuso, E/R (See Map Here)",
                       linkTo: "",
-                    }
+                    },
                   ],
                 },
                 {
@@ -154,8 +156,7 @@ const Footer = () => {
                   children: [
                     {
                       text: "PMB CT3",
-                      textTwo:
-                        "Cantonments, Accra.",
+                      textTwo: "Cantonments, Accra.",
                       linkTo: "",
                     },
                   ],
@@ -201,75 +202,73 @@ const Footer = () => {
                     }
                   >
                     <ul className="space-y-3">
-                      <div
-                        className={` font-heading text-[24px]`}
-                      >
+                      <div className={` font-heading text-[24px]`}>
                         {e.categoryName}
                       </div>
-                      <div className='space-y-1'>
-                        {e.children.map((item: any, idx: Key | null | undefined) => {
-                          return (
-                            <li
-                              key={idx}
-                              className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
-                            >
-                              {item.isLink ? (
-                                !item?.ext ? (
-                                  <Link
-                                    href={item?.linkTo}
-                                    className="hover:underline text-redish-20"
-                                  >
-                                    <p>{item.text}</p>
-                                  </Link>
+                      <div className="space-y-1">
+                        {e.children.map(
+                          (item: any, idx: Key | null | undefined) => {
+                            return (
+                              <li
+                                key={idx}
+                                className={`block text-sm lg:text-[16px] leading-[21px] text-redish-20`}
+                              >
+                                {item.isLink ? (
+                                  !item?.ext ? (
+                                    <Link
+                                      href={item?.linkTo}
+                                      className="hover:underline text-redish-20"
+                                    >
+                                      <p>{item.text}</p>
+                                    </Link>
+                                  ) : (
+                                    <Link
+                                      href={item.linkTo ?? "#"}
+                                      target="_blank"
+                                      className="hover:underline text-redish-20"
+                                      passHref
+                                    >
+                                      <p>{item.text}</p>
+                                    </Link>
+                                  )
                                 ) : (
-                                  <Link
-                                    href={item.linkTo ?? "#"}
-                                    target="_blank"
-                                    className="hover:underline text-redish-20"
-                                    passHref
-                                  >
-                                    <p>{item.text}</p>
-                                  </Link>
-                                )
-                              ) : (
-                                <div>
-                                  <h1 className="text-greyish-10 pb-[4px]">
-                                    {item.text}
-                                  </h1>
-                                  <p>{item.textTwo}</p>
-                                </div>
-                              )}
-                            </li>
-                          );
-                        })}
+                                  <div>
+                                    <h1 className="text-greyish-10 pb-[4px]">
+                                      {item.text}
+                                    </h1>
+                                    <p>{item.textTwo}</p>
+                                  </div>
+                                )}
+                              </li>
+                            );
+                          }
+                        )}
                       </div>
                     </ul>
                   </section>
                 );
               })}
             </div>
-
           </div>
-
         </div>
         {/* Footer end */}
-        <div className='flex justify-between items-center'>
-          <div className='flex gap-[20px] items-center w-[100%]'>
+        <div className="flex justify-between items-center pt-6">
+          <div className="flex flex-col md:flex-row gap-[20px] items-center w-[100%]">
             <div className="relative h-48 w-48">
               <Image
                 src="/assets/au-web-logo-d.png"
                 fill
                 alt={"Logo preview"}
-                className='object-center'
+                className="object-center"
               />
             </div>
 
-            <h1>© Ashesi University. Est. 2002.  All rights reserved.</h1>
+            <h1>© Ashesi University. Est. 2002. All rights reserved.</h1>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
