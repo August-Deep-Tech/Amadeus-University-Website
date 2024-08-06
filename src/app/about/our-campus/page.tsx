@@ -117,7 +117,7 @@ const OurCampus = () => {
   return (
     <div>
       {/* image carousel */}
-      <div className="pb-10 bg-au-burgundy">
+      <div>
         <ImageCarousel />
       </div>
       {/* text writeup */}

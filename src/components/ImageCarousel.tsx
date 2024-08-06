@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import Image from "next/image";
 
 const ImageCarousel = () => {
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     autoplay: true,
     speed: 300,
@@ -15,24 +16,43 @@ const ImageCarousel = () => {
     prevArrow: <PrevArrow />,
   };
 
+  const carouselImagesSrc = [
+    "/assets/about/our-campus/campus-carousel9.jpg",
+    "/assets/about/our-campus/campus-carousel10.jpg",
+    "/assets/about/our-campus/campus-carousel1.jpg",
+    "/assets/about/our-campus/campus-carousel2.jpg",
+    "/assets/about/our-campus/campus-carousel3.jpg",
+    "/assets/about/our-campus/campus-carousel4.jpg",
+    "/assets/about/our-campus/campus-carousel5.jpg",
+    "/assets/about/our-campus/campus-carousel6.jpg",
+    "/assets/about/our-campus/campus-carousel7.jpg",
+    "/assets/about/our-campus/campus-carousel8.jpg",
+    "/assets/about/our-campus/campus-carousel11.jpg",
+  ];
+
   return (
     <div className="relative w-screen h-screen">
       <Slider {...settings}>
-        <div className="relative w-full h-screen">
-          <Image
-            src="/assets/about/our-campus/campus-carousel1.jpg"
-            alt="Image 1"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
-        <div className="relative w-full h-screen">
+        {carouselImagesSrc.map((src, index) => {
+          return (
+            <div key={index} className="relative w-full h-screen">
+              <Image
+                src={src}
+                alt={`Image {index + 1}`}
+                fill
+                style={{objectFit: "cover"}}
+                quality={100}
+              />
+            </div>
+          );
+        })}
+
+        {/* <div className="relative w-full h-screen">
           <Image
             src="/assets/about/our-campus/campus-carousel2.jpg"
             alt="Image 2"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{objectFit: "cover"}}
             quality={100}
           />
         </div>
@@ -40,8 +60,8 @@ const ImageCarousel = () => {
           <Image
             src="/assets/about/our-campus/campus-carousel3.jpg"
             alt="Image 3"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{objectFit: "cover"}}
             quality={100}
           />
         </div>
@@ -49,11 +69,11 @@ const ImageCarousel = () => {
           <Image
             src="/assets/about/our-campus/campus-carousel4.jpg"
             alt="Image 4"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{objectFit: "cover"}}
             quality={100}
           />
-        </div>
+        </div> */}
         {/* Add more images as needed */}
       </Slider>
     </div>
