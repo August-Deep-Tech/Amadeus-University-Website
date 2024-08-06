@@ -178,7 +178,7 @@ const Navbar = () => {
             <Link href="/">
               <div className="relative h-12 w-12">
                 <Image
-                  src="/assets/au-web-logo-d.png"
+                  src="/assets/au-web-logo-d.svg"
                   fill
                   alt={"Logo preview"}
                 />
@@ -194,7 +194,7 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-between items-center">
             <Link href="/" className="relative h-6 w-6 sm:h-20 sm:w-20">
               <Image
-                src="/assets/au-web-logo-d.png"
+                src="/assets/au-web-logo-d.svg"
                 fill
                 alt={"Logo preview"}
               />

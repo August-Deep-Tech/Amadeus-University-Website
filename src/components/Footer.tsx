@@ -256,7 +256,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row gap-[20px] items-center w-[100%]">
             <div className="relative h-48 w-48">
               <Image
-                src="/assets/au-web-logo-d.png"
+                src="/assets/au-web-logo-d.svg"
                 fill
                 alt={"Logo preview"}
                 className="object-center"
